@@ -18,6 +18,7 @@ window.DATE_CONFIG = {
   yourCity: "Goa",
   yourAirport: "GOX",
   yourPhone: "919699068359", // India WhatsApp format: 91 + 10-digit number
+  web3formsKey: "1e133bb9-0214-4cfc-8596-5a174e2a2f07", // Web3Forms Access Key for instant email notifications
   
   // Date Itinerary Options tailored for Open Jeep, Coastal Roads & Coffee
   options: [

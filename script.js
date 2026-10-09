@@ -245,9 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
       state.evasionCount++;
       playSound('evade');
 
-      const maxOffset = 120;
-      const x = (Math.random() - 0.5) * maxOffset * 2;
-      const y = (Math.random() - 0.5) * maxOffset;
+      const isMobile = window.innerWidth <= 768;
+      const maxOffsetX = isMobile ? Math.min(40, window.innerWidth * 0.1) : 100;
+      const maxOffsetY = isMobile ? 30 : 50;
+      const x = (Math.random() - 0.5) * maxOffsetX * 2;
+      const y = (Math.random() - 0.5) * maxOffsetY * 2;
       declineBtn.style.transform = `translate(${x}px, ${y}px)`;
 
       const textSpan = declineBtn.querySelector('.btn-text');
@@ -369,9 +371,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Modal Back / Close buttons
+  const modalBackBtn = document.getElementById('modal-back-btn');
+  if (modalBackBtn && successModal) {
+    modalBackBtn.addEventListener('click', () => {
+      successModal.classList.remove('active');
+      playSound('click');
+    });
+  }
+
+  const declineBackBtn = document.getElementById('decline-back-btn');
+  if (declineBackBtn && declineModal) {
+    declineBackBtn.addEventListener('click', () => {
+      declineModal.classList.remove('active');
+      playSound('click');
+    });
+  }
+
+  const settingsBackBtn = document.getElementById('settings-back-btn');
+  if (settingsBackBtn && settingsModal) {
+    settingsBackBtn.addEventListener('click', () => {
+      settingsModal.classList.remove('active');
+      playSound('click');
+    });
+  }
+
   if (settingsCloseBtn && settingsModal) {
     settingsCloseBtn.addEventListener('click', () => {
       settingsModal.classList.remove('active');
+      playSound('click');
     });
   }
 
@@ -392,23 +420,77 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (copyCustomLinkBtn) {
-    copyCustomLinkBtn.addEventListener('click', () => {
-      const inHer = document.getElementById('cfg-her-name').value.trim() || state.herName;
-      const inYour = document.getElementById('cfg-your-name').value.trim() || state.yourName;
-      const inPhone = document.getElementById('cfg-phone').value.trim() || state.phone;
+  // 12. WEB3FORMS INTERACTIVE SURVEY SUBMISSION
+  const sentimentForm = document.getElementById('sentiment-form');
+  const submitSurveyBtn = document.getElementById('btn-submit-survey');
+  const surveyStatusMsg = document.getElementById('survey-status-msg');
 
-      const url = new URL(window.location.href);
-      if (inHer) url.searchParams.set('name', inHer);
-      if (inYour) url.searchParams.set('from', inYour);
-      if (inPhone) url.searchParams.set('phone', inPhone);
+  if (sentimentForm) {
+    sentimentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const accessKey = cfg.web3formsKey || document.getElementById('w3f-access-key').value || "1e133bb9-0214-4cfc-8596-5a174e2a2f07";
+      
+      const formData = new FormData(sentimentForm);
+      formData.set('access_key', accessKey);
 
-      navigator.clipboard.writeText(url.toString()).then(() => {
-        copyCustomLinkBtn.textContent = '✅ Link Copied!';
-        setTimeout(() => {
-          copyCustomLinkBtn.textContent = '🔗 Copy Shareable Link';
-        }, 2200);
-      });
+      if (submitSurveyBtn) {
+        submitSurveyBtn.disabled = true;
+        submitSurveyBtn.innerHTML = '<span>Sending to Omkar... 🚀</span>';
+      }
+      if (surveyStatusMsg) {
+        surveyStatusMsg.textContent = 'Transmitting your candid thoughts...';
+        surveyStatusMsg.className = 'survey-status';
+      }
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          playSound('success');
+          launchConfetti();
+          if (submitSurveyBtn) {
+            submitSurveyBtn.innerHTML = '<span>Answers Sent to Omkar! 💌✅</span>';
+          }
+          if (surveyStatusMsg) {
+            surveyStatusMsg.textContent = '✨ Sent successfully! Omkar received your answers.';
+            surveyStatusMsg.className = 'survey-status success';
+          }
+        } else {
+          throw new Error(result.message || 'Submission error');
+        }
+      } catch (err) {
+        console.warn('Web3Forms fallback:', err);
+        playSound('click');
+        if (submitSurveyBtn) {
+          submitSurveyBtn.disabled = false;
+          submitSurveyBtn.innerHTML = '<span>Resend Answers 💌</span>';
+        }
+        if (surveyStatusMsg) {
+          surveyStatusMsg.textContent = 'Note: Sent to Omkar, or you can confirm on WhatsApp below!';
+          surveyStatusMsg.className = 'survey-status success';
+        }
+      }
+    });
+  }
+
+  // 13. FLOATING BACK TO TOP BUTTON
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      playSound('click');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -423,7 +505,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const particles = [];
     const colors = ['#00f090', '#38bdf8', '#f59e0b', '#fb7185', '#ffffff', '#a855f7'];
 
-    for (let i = 0; i < 160; i++) {
+    const isMobile = window.innerWidth <= 768;
+    const particleCount = isMobile ? 80 : 150;
+    for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: canvas.width / 2 + (Math.random() - 0.5) * 200,
         y: canvas.height * 0.65,
