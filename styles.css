@@ -1193,6 +1193,13 @@ body {
   box-shadow: 0 0 14px rgba(0, 240, 144, 0.25);
 }
 
+.radio-pill.pill-neutral input:checked + span {
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(244, 63, 94, 0.45);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(244, 63, 94, 0.2);
+}
+
 .highlight-survey-group {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(10, 14, 25, 0.4) 100%);
   border: 1px solid rgba(0, 240, 144, 0.25);

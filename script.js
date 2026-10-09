@@ -502,14 +502,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
 
         if (result.success) {
-          playSound('success');
-          launchConfetti();
-          if (submitSurveyBtn) {
-            submitSurveyBtn.innerHTML = '<span>Answers Sent to Omkar! 💌✅</span>';
-          }
-          if (surveyStatusMsg) {
-            surveyStatusMsg.textContent = '✨ Sent successfully! Omkar received your answers.';
-            surveyStatusMsg.className = 'survey-status success';
+          const selectedContinue = formData.get('continue_talking') || '';
+          const isDecline = selectedContinue.includes('Not feeling a romantic match');
+
+          if (isDecline) {
+            playSound('click');
+            if (submitSurveyBtn) {
+              submitSurveyBtn.innerHTML = '<span>Note Sent to Omkar 🌸</span>';
+            }
+            if (surveyStatusMsg) {
+              surveyStatusMsg.textContent = '✨ Thank you for being so genuine and honest, Shraddha! Wishing you wonderful travels and big market wins ahead.';
+              surveyStatusMsg.className = 'survey-status success';
+            }
+          } else {
+            playSound('success');
+            launchConfetti();
+            if (submitSurveyBtn) {
+              submitSurveyBtn.innerHTML = '<span>Answers Sent to Omkar! 💌✅</span>';
+            }
+            if (surveyStatusMsg) {
+              surveyStatusMsg.textContent = '✨ Sent successfully! Omkar received your answers.';
+              surveyStatusMsg.className = 'survey-status success';
+            }
           }
         } else {
           throw new Error(result.message || 'Submission error');
