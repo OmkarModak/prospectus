@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONFIDENTIAL: Investment Memorandum & Travel Brief ($JEEP_BOM_GOA)</title>
+  <meta name="description" content="An unsolicited, highly accretive proposal: Open Jeep coastal exploration, zero mountains, and Dalal Street market wit.">
+  
+  <!-- Modern Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Canvas for Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Live Market Ticker Tape -->
+  <header class="ticker-bar" id="ticker-bar" aria-label="Live Market Ticker">
+    <div class="ticker-track" id="ticker-track">
+      <!-- Dynamic ticker items loaded from config.js / script.js -->
+    </div>
+  </header>
+
+  <!-- Navigation / Top Header -->
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <span class="pulse-indicator"></span>
+      <span class="brand-code" id="brand-ticker">BOM ⇄ GOA: OPEN JEEP EDITION</span>
+      <span class="badge live-badge">HIGH CONVICTION 🚙</span>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn sound-toggle" id="sound-btn" title="Sound Effects" aria-label="Toggle Sound">
+        <span id="sound-icon">🔊</span> Sound: ON
+      </button>
+      <button class="nav-btn customize-btn" id="open-settings-btn" title="Personalize this page">
+        ⚙️ Customize
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="memo-pill">
+        <span class="pill-dot"></span>
+        <span class="pill-text">DALAL STREET ⇄ GOA COASTAL // OPEN JEEP MEMO 🚙🌴</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Most Accretive M&A of Q4: <br>
+        <span class="gradient-text">Open Jeep & Americano</span> 🚙☕
+      </h1>
+
+      <p class="hero-subtitle">
+        Prepared exclusively for <strong class="highlight-text" id="her-name-display">Shraddha</strong>.
+        To the girl who dreams of exploring the world behind the wheel of an open-top jeep — wind in her hair, endless ocean horizons, and <span class="highlight-text">strictly zero mountain treks</span>.
+      </p>
+
+      <!-- Financial Metric Highlights / Terminal Card -->
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">TERMINAL // TICKER: $OPEN_JEEP // MOUNTAINS: SHORTED 🚫⛰️</div>
+          <div class="terminal-status">STATUS: OVERWEIGHT 🟢</div>
+        </div>
+        <div class="terminal-body">
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-label">Altitude Target</span>
+              <span class="metric-val text-green">0m (Sea Level)</span>
+              <span class="metric-sub">Strictly Zero Mountains</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Wind In Hair Ratio</span>
+              <span class="metric-val text-cyan">100% Top-Down</span>
+              <span class="metric-sub">Open Jeep Guaranteed</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Dividend Yield</span>
+              <span class="metric-val text-gold">Infinite Smiles</span>
+              <span class="metric-sub">Paid in Coastal Sunsets</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Board Governance</span>
+              <span class="metric-val text-purple" id="seniority-badge">+1 Yr Wisdom</span>
+              <span class="metric-sub">Senior Partner (AUX Rights)</span>
+            </div>
+          </div>
+
+          <!-- Mini Candlestick Graphic -->
+          <div class="chart-teaser">
+            <div class="chart-info">
+              <span>Road Trip Sentiment: <strong>Breakout Rally Across Coastal Trails</strong></span>
+              <span class="chart-gain">+999.8% 🚙💨</span>
+            </div>
+            <div class="chart-svg-container">
+              <svg viewBox="0 0 600 80" class="mini-chart-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,70 Q 100,65 180,55 T 320,40 T 450,22 T 600,8 L 600,80 L 0,80 Z" fill="url(#chartGlow)" />
+                <path d="M0,70 Q 100,65 180,55 T 320,40 T 450,22 T 600,8" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" />
+                <circle cx="600" cy="8" r="5" fill="#10b981" class="pulsing-chart-dot" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#itinerary" class="btn btn-primary" id="cta-view-itinerary">
+          <span>Choose Your Expedition 🚙✈️</span>
+        </a>
+        <a href="#thesis" class="btn btn-secondary" id="cta-view-thesis">
+          <span>Read The Investment Thesis 📑</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 1: INVESTMENT THESIS -->
+    <section class="section" id="thesis">
+      <div class="section-tag">DUE DILIGENCE REPORT</div>
+      <h2 class="section-title">Why This Trade Beats The Benchmark</h2>
+      <p class="section-desc">
+        A fundamental breakdown of why Dalal Street finance instincts + an open jeep cruising Goa's coastlines is the ultimate trade.
+      </p>
+
+      <div class="thesis-grid">
+        <!-- Thesis 1: Open Jeep & Zero Mountains -->
+        <div class="thesis-card highlight-card">
+          <div class="card-icon">🚙🌴</div>
+          <div class="card-badge">Terrain Strategy</div>
+          <h3 class="card-title">The Open Jeep & Zero-Mountains Mandate</h3>
+          <p class="card-text">
+            You want to roam the world with top-down 4x4 freedom, breezy air, and endless flat horizons — with zero desire to freeze on rocky mountain treks. We have officially <strong>shorted all mountains</strong> to 0. Goa was practically engineered for open jeeps, palm trees, and ocean views at sea level.
+          </p>
+        </div>
+
+        <!-- Thesis 2: Senior Partner Factor -->
+        <div class="thesis-card">
+          <div class="card-icon">👑</div>
+          <div class="card-badge">Governance Advantage</div>
+          <h3 class="card-title">The Senior Partner Factor</h3>
+          <p class="card-text">
+            Being exactly 1 year older gives you full executive authority. You bring market discipline, seasoned instincts, and the non-negotiable right to control the AUX chord and select the jeep soundtrack.
+          </p>
+        </div>
+
+        <!-- Thesis 3: World Traveler Meets Local Pilot -->
+        <div class="thesis-card">
+          <div class="card-icon">🌍</div>
+          <div class="card-badge">Global Wanderlust</div>
+          <h3 class="card-title">The Globe-Trotter & Coastal Pilot</h3>
+          <p class="card-text">
+            You've stamped passports across continents and collected world-class travel stories. I haven't seen all seven wonders yet, which makes me the ideal audience for your travel diaries, and your dedicated pilot for Goa's quietest beach roads.
+          </p>
+        </div>
+
+        <!-- Thesis 4: 50-Minute Flight Arbitrage -->
+        <div class="thesis-card">
+          <div class="card-icon">💎</div>
+          <div class="card-badge">Statistically Rare Outlier</div>
+          <h3 class="card-title">The 50-Minute Flight Arbitrage</h3>
+          <p class="card-text">
+            BOM to Goa is a 50-minute flight — literally faster than driving from Bandra to Nariman Point in Friday rush hour. Finding a cute trader on Shaadi who loves open jeeps and avoids mountain hiking is a 5-sigma mathematical miracle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE BOARDING PASS & ITINERARY -->
+    <section class="section" id="itinerary">
+      <div class="section-tag">EXPEDITION ALLOCATION</div>
+      <h2 class="section-title">Select Your Preferred Asset Class</h2>
+      <p class="section-desc">
+        Pick your style below — from an open jeep coastal cruise in Goa to an artisanal roaster in Mumbai. Watch your Boarding Pass update live.
+      </p>
+
+      <!-- Option Picker Cards -->
+      <div class="options-container" id="options-grid">
+        <!-- Injected via JavaScript from config.js -->
+      </div>
+
+      <!-- Real-time Interactive Boarding Pass Card -->
+      <div class="boarding-pass-wrapper">
+        <div class="boarding-pass" id="boarding-pass">
+          <div class="pass-left">
+            <div class="pass-header">
+              <div class="airline-brand">
+                <span class="flight-icon">🚙</span>
+                <span class="flight-name">BOM ⇄ GOA COASTAL EXPRESS</span>
+              </div>
+              <div class="class-label">FIRST CLASS EXPEDITION</div>
+            </div>
+
+            <div class="pass-content">
+              <div class="pass-row">
+                <div class="pass-col">
+                  <span class="pass-label">PASSENGER NAME</span>
+                  <span class="pass-val text-white" id="pass-passenger-name">Shraddha</span>
+                </div>
+                <div class="pass-col">
+                  <span class="pass-label">FLIGHT / VEHICLE</span>
+                  <span class="pass-val text-gold">JEEP-4X4 ($DATE)</span>
+                </div>
+              </div>
+
+              <div class="pass-route">
+                <div class="route-city">
+                  <span class="city-code" id="pass-orig-code">BOM</span>
+                  <span class="city-name" id="pass-orig-name">Mumbai (Dalal St)</span>
+                </div>
+                <div class="route-arrow">
+                  <span class="plane-mid">🚙</span>
+                  <span class="route-line"></span>
+                </div>
+                <div class="route-city">
+                  <span class="city-code" id="pass-dest-code">JEEP</span>
+                  <span class="city-name" id="pass-dest-name">Goa (Open Coast)</span>
+                </div>
+              </div>
+
+              <div class="pass-row detail-row">
+                <div class="pass-col">
+                  <span class="pass-label">TERRAIN & TIMING</span>
+                  <span class="pass-val text-green" id="pass-date-display">Sea Level (0m Altitude)</span>
+                </div>
+                <div class="pass-col">
+                  <span class="pass-label">LOCATION</span>
+                  <span class="pass-val text-cyan" id="pass-gate-display">Palm-Lined Coastal Trail</span>
+                </div>
+                <div class="pass-col">
+                  <span class="pass-label">SEAT</span>
+                  <span class="pass-val text-gold">Front Passenger (Wind & AUX)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Passport Stamp -->
+            <div class="stamp-box" id="passport-stamp">
+              <div class="stamp-circle">
+                <span class="stamp-country" id="stamp-city-text">GOA COAST</span>
+                <span class="stamp-date">APPROVED</span>
+                <span class="stamp-status">★ 0% MOUNTAINS ★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pass-divider">
+            <span class="cutout-top"></span>
+            <span class="perforated-line"></span>
+            <span class="cutout-bottom"></span>
+          </div>
+
+          <div class="pass-right">
+            <div class="stub-header">
+              <span>EXPEDITION STUB</span>
+            </div>
+            <div class="stub-details">
+              <div>
+                <span class="pass-label">EXPERIENCE</span>
+                <span class="stub-val text-white" id="stub-exp-name">Open Jeep Coastal Cruise</span>
+              </div>
+              <div>
+                <span class="pass-label">SECTOR</span>
+                <span class="stub-val" id="stub-city-name">Mumbai ⇄ Goa</span>
+              </div>
+              <div>
+                <span class="pass-label">RATING</span>
+                <span class="stub-val text-green">STRONG BUY</span>
+              </div>
+            </div>
+            <div class="barcode">
+              <div class="barcode-bars"></div>
+              <span class="barcode-num">4X4 JEEP 2026 001</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROJECTED CHEMISTRY TRAJECTORY -->
+    <section class="section" id="trajectory">
+      <div class="section-tag">TECHNICAL ANALYSIS</div>
+      <h2 class="section-title">Projected Chemistry Index Over Time</h2>
+      <p class="section-desc">
+        Simulation of the open-air road trip based on macro sentiment indicators.
+      </p>
+
+      <div class="timeline-chart-card">
+        <div class="timeline-steps">
+          <div class="timeline-node active">
+            <div class="node-time">00 Min</div>
+            <div class="node-pill">Ignition & Opening Bell</div>
+            <h4>Jeep Doors Off, First Greeting</h4>
+            <p>"Hey, great to meet you!" You take the front seat, plug in your phone, smiles confirmed.</p>
+          </div>
+          <div class="timeline-node">
+            <div class="node-time">25 Min</div>
+            <div class="node-pill">Open Highway</div>
+            <h4>Travel Chronicles & Wind in Hair</h4>
+            <p>Cruising coastal curves while trading stories of favorite world cities and wild stock trades.</p>
+          </div>
+          <div class="timeline-node">
+            <div class="node-time">55 Min</div>
+            <div class="node-pill">Peak Sentiment</div>
+            <h4>Shaadi.com & Mountain Roast</h4>
+            <p>Roasting Shaadi algorithm bios and mutually rejoicing that there are zero steep mountains to hike.</p>
+          </div>
+          <div class="timeline-node">
+            <div class="node-time">90 Min+</div>
+            <div class="node-pill">All-Time High</div>
+            <h4>Sunset Coffee on the Beach</h4>
+            <p>Pulling up to a secret seaside cafe right as the golden sun dips beneath the sea.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THE ORDER EXECUTION TERMINAL (THE ASK) -->
+    <section class="section execution-section" id="execute">
+      <div class="section-tag text-green">TRADE EXECUTION</div>
+      <h2 class="section-title">Execute The Order</h2>
+      <p class="section-desc">
+        No margin calls, no steep hikes. Just pick your preferred window and hit Execute.
+      </p>
+
+      <div class="trade-terminal">
+        <div class="trade-inputs">
+          <label class="input-label" for="time-chips">Select Preferred Execution Window:</label>
+          <div class="time-chips" id="time-chips" role="radiogroup" aria-label="Preferred Time">
+            <button type="button" class="chip active" data-time="Your next Goa weekend trip (Jeep cruise)">🏖️ Your next Goa trip (Jeep cruise)</button>
+            <button type="button" class="chip" data-time="Next time I'm in Mumbai (Coffee run)">☕ Next time I'm in Mumbai</button>
+            <button type="button" class="chip" data-time="This upcoming weekend (Let's coordinate)">🌅 This upcoming weekend</button>
+            <button type="button" class="chip" data-time="Post-Market Weekday (5 PM+)">📈 Post-Market Weekday (5 PM+)</button>
+          </div>
+        </div>
+
+        <div class="contract-terms">
+          <div class="term-bullet">✔️ <strong>The Zero-Mountains Guarantee:</strong> Strictly 0 meters of mountain hiking. 100% open jeep cruising, sea-level breezes, and sunset horizon.</div>
+          <div class="term-bullet">✔️ <strong>Senior Partner Authority:</strong> You get permanent AUX cord privileges and unilateral veto power over the playlist.</div>
+          <div class="term-bullet">✔️ <strong>World Traveler Clause:</strong> Unlimited airtime to discuss any country you loved exploring or plan to visit next.</div>
+        </div>
+
+        <!-- The Action Buttons -->
+        <div class="action-buttons-wrap">
+          <button class="btn-execute" id="btn-accept">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">📈</span>
+              <span class="btn-text">EXECUTE ORDER (I'M IN)</span>
+            </span>
+          </button>
+
+          <button class="btn-reject" id="btn-decline">
+            <span class="btn-text">Short The Position (Decline) 📉</span>
+          </button>
+        </div>
+
+        <div class="disclaimer-text">
+          * Past performance on Shaadi.com is no guarantee of future results, but open-jeep coastal fundamentals are exceptionally bullish.
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS MODAL (Triggered when she clicks Execute Order) -->
+    <div class="modal-overlay" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-card">
+        <div class="modal-confetti-badge">🎉 EXPEDITION CONFIRMED! 🚙🚀</div>
+        <h2 id="modal-title" class="modal-heading">Trade Confirmed: Strong Buy Executed!</h2>
+        <p class="modal-p">
+          Congratulations! You've just locked in the most accretive open-jeep coffee date of the year. 
+        </p>
+
+        <div class="modal-receipt">
+          <div class="receipt-row">
+            <span>Expedition:</span>
+            <strong id="receipt-asset">Open Jeep Coastal Cruise</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Window:</span>
+            <strong id="receipt-time">Your next Goa weekend trip</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Terrain:</span>
+            <strong id="receipt-city">Goa Coast (0m Mountains)</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Counterparty:</span>
+            <strong id="receipt-from">Omkar</strong>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" class="btn btn-whatsapp" id="btn-whatsapp-send" target="_blank" rel="noopener noreferrer">
+            <span>Confirm on WhatsApp 💬</span>
+          </a>
+          <button class="btn btn-copy" id="btn-copy-trade">
+            <span>📋 Copy Trade Receipt</span>
+          </button>
+        </div>
+
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+    </div>
+
+    <!-- DECLINE FUNNY MODAL (If she manages to click Short Position) -->
+    <div class="modal-overlay" id="decline-modal" role="dialog" aria-modal="true">
+      <div class="modal-card decline-card">
+        <div class="modal-confetti-badge warning-badge">⚠️ CIRCUIT BREAKER TRIGGERED</div>
+        <h2 class="modal-heading">Order Rejected by Market Regulators!</h2>
+        <p class="modal-p">
+          SEBI and the Coastal Exchange Commission have halted short-selling on open jeep drives due to overwhelming positive sentiment.
+        </p>
+        <p class="modal-sub">
+          <em>Recommendation from financial analysts: Accept the open jeep cruise with zero mountain climbing 😉</em>
+        </p>
+        <button class="btn btn-primary" id="btn-reconsider">
+          <span>Re-evaluate and Execute Trade 🚙☕</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SETTINGS / PERSONALIZATION MODAL -->
+    <div class="modal-overlay" id="settings-modal" role="dialog" aria-modal="true">
+      <div class="modal-card settings-card">
+        <div class="settings-header">
+          <h3>⚙️ Personalize Your Pitch</h3>
+          <button class="modal-close" id="settings-close-btn">✕</button>
+        </div>
+        <p class="modal-sub">
+          Customize her name, your name, and your WhatsApp number so she can RSVP with a single tap!
+        </p>
+        <form id="settings-form" class="settings-form">
+          <div class="form-group">
+            <label for="cfg-her-name">Her Name:</label>
+            <input type="text" id="cfg-her-name" placeholder="e.g. Pooja, Rhea, Aditi..." />
+          </div>
+          <div class="form-group">
+            <label for="cfg-your-name">Your Name:</label>
+            <input type="text" id="cfg-your-name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-phone">Your WhatsApp Number (with country code):</label>
+            <input type="text" id="cfg-phone" placeholder="e.g. 919876543210 (no + or spaces)" />
+            <small>When she clicks "Confirm on WhatsApp", it opens a chat directly with you!</small>
+          </div>
+          <div class="settings-btns">
+            <button type="submit" class="btn btn-primary">Save & Apply</button>
+            <button type="button" class="btn btn-secondary" id="btn-copy-custom-link">🔗 Copy Shareable Link</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Crafted with high conviction, open-top 4x4 energy & coastal affection. Deployed on GitHub Pages.</p>
+      <p class="footer-sub">Ticker $OPEN_JEEP • Mountains permanently shorted • Rated <strong>STRONG BUY</strong>.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
