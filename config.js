@@ -76,9 +76,11 @@ window.DATE_CONFIG = {
   tickerItems: [
     { symbol: "$SHRADDHA", change: "+100% 🚀", status: "STRONG BUY" },
     { symbol: "$OPEN_JEEP", change: "+100% 🚙💨", status: "ALL-TIME HIGH" },
+    { symbol: "$TRADING_LESSONS", change: "STUDENT READY 📚📈", status: "PENDING APPROVAL" },
     { symbol: "$MOUNTAINS", change: "-100% 🚫⛰️", status: "PERMANENTLY SHORTED" },
     { symbol: "$COASTAL_ROADS", change: "BULL RUN 🌴", status: "STRONG BUY" },
     { symbol: "$BOM_TO_GOA", change: "50 MIN FLIGHT ✈️", status: "BULLISH" },
+    { symbol: "$KNOWLEDGE_TRANSFER", change: "COFFEE FOR CHARTS ☕📊", status: "MUTUAL GAIN" },
     { symbol: "$COFFEE", change: "+42.8%", status: "HIGH LIQUIDITY" },
     { symbol: "$SENIOR_PARTNER", change: "+1 YR WISDOM", status: "RESPECT" },
     { symbol: "$WIND_IN_HAIR", change: "MAX REACHED ✨", status: "EXPONENTIAL" }

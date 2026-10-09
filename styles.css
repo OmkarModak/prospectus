@@ -1134,6 +1134,12 @@ body {
   letter-spacing: 0.05em;
 }
 
+.required-star {
+  color: var(--bear-red);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 .survey-subhint {
   font-size: 0.8rem;
   font-weight: 400;

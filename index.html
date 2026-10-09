@@ -175,6 +175,16 @@
             BOM to Goa is a 50-minute flight — literally faster than driving from Bandra to Nariman Point in Friday rush hour. Finding a cute trader on Shaadi who loves open jeeps and avoids mountain hiking is a 5-sigma mathematical miracle.
           </p>
         </div>
+
+        <!-- Thesis 5: Learn Stock Trading -->
+        <div class="thesis-card highlight-card">
+          <div class="card-icon">📈📚</div>
+          <div class="card-badge">Knowledge Arbitrage</div>
+          <h3 class="card-title">Trading Mentorship Clause</h3>
+          <p class="card-text">
+            If permitted by the Senior Partner, I genuinely want to learn how the stock market and trading actually work from you — how to decode charts, manage risk, and make money in the markets. In exchange, I offer lifetime complimentary open-jeep driving, coffee, and coastal navigation.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -372,18 +382,18 @@
           <!-- Question 2: First Impression -->
           <div class="survey-group">
             <label class="survey-label" for="ans-impression">
-              <span class="q-num">02.</span> What was your unfiltered first impression / feel about me?
+              <span class="q-num">02.</span> What was your unfiltered first impression / feel about me? <span class="required-star">*</span>
             </label>
-            <textarea id="ans-impression" name="first_impression" class="survey-input survey-textarea" rows="2" placeholder="Be completely candid! (e.g. calm demeanor, sounded genuine, quirky humor, good listener...)"></textarea>
+            <textarea id="ans-impression" name="first_impression" class="survey-input survey-textarea" rows="2" placeholder="Be completely candid! (e.g. calm demeanor, sounded genuine, quirky humor, good listener...)" required></textarea>
           </div>
 
           <!-- Question 3: Free Time -->
           <div class="survey-group">
             <label class="survey-label" for="ans-freetime">
-              <span class="q-num">03.</span> What’s your absolute favorite thing to do in your free time?
+              <span class="q-num">03.</span> What’s your absolute favorite thing to do in your free time? <span class="required-star">*</span>
               <span class="survey-subhint">(I know you're not a big text-chatter, so how do you love unwinding when you're off the trading screens?)</span>
             </label>
-            <input type="text" id="ans-freetime" name="free_time_activity" class="survey-input" placeholder="e.g. long drives, watching charts, exploring cozy cafes, planning travels, music...">
+            <input type="text" id="ans-freetime" name="free_time_activity" class="survey-input" placeholder="e.g. long drives, watching charts, exploring cozy cafes, planning travels, music..." required>
           </div>
 
           <!-- Question 4: Date Destination -->
@@ -414,12 +424,34 @@
           <!-- Question 5: Her Go-To Drink -->
           <div class="survey-group">
             <label class="survey-label" for="ans-drink">
-              <span class="q-num">05.</span> Bonus due diligence: What is your exact go-to coffee or drink order?
+              <span class="q-num">05.</span> Bonus due diligence: What is your exact go-to coffee or drink order? <span class="required-star">*</span>
             </label>
-            <input type="text" id="ans-drink" name="favorite_drink" class="survey-input" placeholder="e.g. Iced Americano, Oat Flat White, Tender Coconut, Matcha, Pour-over...">
+            <input type="text" id="ans-drink" name="favorite_drink" class="survey-input" placeholder="e.g. Iced Americano, Oat Flat White, Tender Coconut, Matcha, Pour-over..." required>
           </div>
 
-          <!-- Question 6: Green Flag / Would you like to continue talking? -->
+          <!-- Question 6: Learn Stock Market From Her -->
+          <div class="survey-group">
+            <label class="survey-label">
+              <span class="q-num">06.</span> Honest proposition: Would you be open to teaching me how stock market trading works?
+              <span class="survey-subhint">(I genuinely want to learn how trading works and how you grow money in the markets — will you take me on as an apprentice?)</span>
+            </label>
+            <div class="survey-options" role="radiogroup">
+              <label class="radio-pill pill-green">
+                <input type="radio" name="teach_trading" value="Deal! First trading lesson over coffee 📊☕" checked>
+                <span>📊 Deal! First trading lesson over coffee</span>
+              </label>
+              <label class="radio-pill pill-green">
+                <input type="radio" name="teach_trading" value="Only if you're a dedicated student & bring good coffee ☕">
+                <span>☕ Only if you're a dedicated student</span>
+              </label>
+              <label class="radio-pill pill-green">
+                <input type="radio" name="teach_trading" value="Haha, let's see how you handle market volatility first 😉">
+                <span>📈 Let's test your risk appetite first 😉</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 7: Green Flag / Would you like to continue talking? -->
           <div class="survey-group highlight-survey-group">
             <div class="green-flag-banner">
               <span class="gf-badge">🟢 CERTIFIED GREEN FLAG ZONE</span>
@@ -428,7 +460,7 @@
               </p>
             </div>
             <label class="survey-label">
-              <span class="q-num">06.</span> Would you like to continue talking to me?
+              <span class="q-num">07.</span> Would you like to continue talking to me?
             </label>
             <div class="survey-options" role="radiogroup">
               <label class="radio-pill pill-green">
@@ -446,10 +478,10 @@
             </div>
           </div>
 
-          <!-- Question 7: Questions for Omkar -->
+          <!-- Question 8: Questions for Omkar -->
           <div class="survey-group">
             <label class="survey-label" for="ans-questions">
-              <span class="q-num">07.</span> Your turn on the mic: Any questions, doubts, or curiosities for me?
+              <span class="q-num">08.</span> Your turn on the mic: Any questions, doubts, or curiosities for me?
             </label>
             <textarea id="ans-questions" name="questions_for_omkar" class="survey-input survey-textarea" rows="2" placeholder="Ask me anything at all — about life, Goa, travel, or anything you're curious about!"></textarea>
           </div>
@@ -486,6 +518,7 @@
 
         <div class="contract-terms">
           <div class="term-bullet">✔️ <strong>The Zero-Mountains Guarantee:</strong> Strictly 0 meters of mountain hiking. 100% open jeep cruising, sea-level breezes, and sunset horizon.</div>
+          <div class="term-bullet">✔️ <strong>Trading Mentorship Clause:</strong> You teach me how trading works and how to grow money in the markets (if you're open to taking on a student), and I'll handle all the coffee, jeep routes, and good vibes.</div>
           <div class="term-bullet">✔️ <strong>Senior Partner Authority:</strong> You get permanent AUX cord privileges and unilateral veto power over the playlist.</div>
           <div class="term-bullet">✔️ <strong>World Traveler Clause:</strong> Unlimited airtime to discuss any country you loved exploring or plan to visit next.</div>
         </div>

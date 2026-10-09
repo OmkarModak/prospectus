@@ -327,6 +327,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (successModal) {
         successModal.classList.add('active');
       }
+
+      // Send instant trade execution alert to Omkar's inbox via Web3Forms
+      const orderPayload = new FormData();
+      orderPayload.set('access_key', cfg.web3formsKey || "1e133bb9-0214-4cfc-8596-5a174e2a2f07");
+      orderPayload.set('subject', '🚀 BREAKING: Shraddha Executed Date Order ($OPEN_JEEP IPO)!');
+      orderPayload.set('from_name', `${state.herName} (Date Order Executed)`);
+      orderPayload.set('Status', 'CONFIRMED STRONG BUY 📈');
+      orderPayload.set('Expedition', optTitle);
+      orderPayload.set('Preferred Window', state.selectedTime);
+      orderPayload.set('Sector / Location', opt ? (opt.location || 'Goa Coast') : 'Goa Coast');
+      orderPayload.set('Execution Time', new Date().toLocaleString());
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: orderPayload
+      }).catch(err => console.warn('Order notification ping:', err));
     });
   }
 
@@ -428,6 +444,42 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sentimentForm) {
     sentimentForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Form validation against null/empty inputs
+      const ansImpression = document.getElementById('ans-impression');
+      const ansFreetime = document.getElementById('ans-freetime');
+      const ansDrink = document.getElementById('ans-drink');
+
+      if (!ansImpression || !ansImpression.value.trim()) {
+        if (ansImpression) ansImpression.focus();
+        if (surveyStatusMsg) {
+          surveyStatusMsg.textContent = '⚠️ Please share a quick word about your first impression! 😊';
+          surveyStatusMsg.className = 'survey-status error';
+        }
+        playSound('evade');
+        return;
+      }
+
+      if (!ansFreetime || !ansFreetime.value.trim()) {
+        if (ansFreetime) ansFreetime.focus();
+        if (surveyStatusMsg) {
+          surveyStatusMsg.textContent = '⚠️ Tell me a little about how you love unwinding in your free time! 🚙';
+          surveyStatusMsg.className = 'survey-status error';
+        }
+        playSound('evade');
+        return;
+      }
+
+      if (!ansDrink || !ansDrink.value.trim()) {
+        if (ansDrink) ansDrink.focus();
+        if (surveyStatusMsg) {
+          surveyStatusMsg.textContent = '⚠️ Please tell me your go-to coffee or drink order! ☕';
+          surveyStatusMsg.className = 'survey-status error';
+        }
+        playSound('evade');
+        return;
+      }
+
       const accessKey = cfg.web3formsKey || document.getElementById('w3f-access-key').value || "1e133bb9-0214-4cfc-8596-5a174e2a2f07";
       
       const formData = new FormData(sentimentForm);
