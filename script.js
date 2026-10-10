@@ -124,6 +124,115 @@ document.addEventListener('DOMContentLoaded', () => {
     tickerTrack.innerHTML = renderItems(cfg.tickerItems) + renderItems(cfg.tickerItems) + renderItems(cfg.tickerItems);
   }
 
+  // 4b. REAL-TIME STOCK PRICE SURGE ENGINE ($DATE)
+  const stockPriceEl = document.getElementById('live-stock-price');
+  const stockPtsEl = document.getElementById('stock-pts-gain');
+  const stockPctEl = document.getElementById('stock-pct-gain');
+  const stockFeedText = document.getElementById('stock-feed-text');
+  const chartLiveGain = document.getElementById('chart-live-gain');
+  const chartPriceTag = document.getElementById('chart-price-tag');
+  const liveCandleBody = document.getElementById('live-candle-body');
+  const liveCandleWick = document.getElementById('live-candle-wick');
+  const priceTrackingLine = document.getElementById('price-tracking-line');
+  const livePriceAxisBadge = document.getElementById('live-price-axis-badge');
+  const livePriceAxisText = document.getElementById('live-price-axis-text');
+
+  if (stockPriceEl) {
+    let currentPrice = 4892.50;
+    let baseGainPts = 1268.40;
+    let baseGainPct = 34.82;
+    let candleY = 14;
+    let candleHeight = 14;
+    let wickTopY = 10;
+
+    const liveFeedUpdates = [
+      '"BOM Market Maven approved Cold Coffee, Whiskey & Open Jeep ☕🥃🚙"',
+      '"Dalal Street analysts raise price target: Strong Buy confirmed 📈"',
+      '"SEBI confirms: Zero mountain climbing rule permanently locked in 🚫⛰️"',
+      '"High conviction call: Goa coastal route velocity reaching breakout speed 💨"',
+      '"Playlist control successfully transferred to Senior Partner 🎶"',
+      '"Acoustic vocals added to long-term portfolio reserves ✨"',
+      '"Short sellers forced to cover: Date sentiment up +999.8% 🚀"',
+      '"Upper circuit limit locked: Zero awkwardness guaranteed 🥂"'
+    ];
+    let feedIndex = 0;
+
+    setInterval(() => {
+      // Small random upward tick between ₹4.20 and ₹18.50 (always surges up!)
+      const tickDelta = (Math.random() * 12 + 4.5);
+      currentPrice += tickDelta;
+      baseGainPts += tickDelta;
+      baseGainPct += (tickDelta / 95);
+
+      const formattedPrice = currentPrice.toLocaleString('en-IN', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      // Format price with Indian currency commas
+      stockPriceEl.textContent = formattedPrice;
+
+      if (chartPriceTag) {
+        chartPriceTag.textContent = `₹${formattedPrice}`;
+      }
+
+      if (livePriceAxisText) {
+        livePriceAxisText.textContent = `₹${Math.round(currentPrice).toLocaleString('en-IN')}`;
+      }
+
+      // Animate the rising live candlestick
+      candleY = Math.max(5, candleY - (Math.random() * 0.9 + 0.3));
+      candleHeight = Math.min(24, candleHeight + (Math.random() * 0.8 + 0.2));
+      wickTopY = Math.max(2, wickTopY - (Math.random() * 0.9 + 0.4));
+
+      if (liveCandleBody) {
+        liveCandleBody.setAttribute('y', candleY.toFixed(1));
+        liveCandleBody.setAttribute('height', candleHeight.toFixed(1));
+      }
+      if (liveCandleWick) {
+        liveCandleWick.setAttribute('y1', wickTopY.toFixed(1));
+      }
+      if (priceTrackingLine) {
+        priceTrackingLine.setAttribute('y1', candleY.toFixed(1));
+        priceTrackingLine.setAttribute('y2', candleY.toFixed(1));
+      }
+      if (livePriceAxisBadge) {
+        livePriceAxisBadge.setAttribute('transform', `translate(580, ${(candleY - 7).toFixed(1)})`);
+      }
+
+      if (stockPtsEl) {
+        stockPtsEl.textContent = `+${baseGainPts.toLocaleString('en-IN', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        })}`;
+      }
+
+      if (stockPctEl) {
+        stockPctEl.textContent = `(+${baseGainPct.toFixed(2)}%)`;
+      }
+
+      if (chartLiveGain) {
+        chartLiveGain.textContent = `+${(999.8 + (baseGainPct - 34.82) * 4).toFixed(1)}% 🚙💨`;
+      }
+
+      // Flash neon green
+      stockPriceEl.classList.add('price-up');
+      setTimeout(() => {
+        stockPriceEl.classList.remove('price-up');
+      }, 450);
+
+      // Rotate feed text
+      if (Math.random() > 0.4 && stockFeedText) {
+        feedIndex = (feedIndex + 1) % liveFeedUpdates.length;
+        stockFeedText.style.opacity = '0';
+        setTimeout(() => {
+          stockFeedText.textContent = liveFeedUpdates[feedIndex];
+          stockFeedText.style.opacity = '1';
+        }, 220);
+      }
+    }, 2200);
+  }
+
   // 5. UPDATE DOM WITH PERSONALIZED DATA
   function applyPersonalization() {
     const herNameEls = [
@@ -189,7 +298,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const stampBox = document.getElementById('passport-stamp');
 
     if (destCode) {
-      if (opt.id === 'open-jeep') destCode.textContent = 'JEEP';
+      if (opt.id === 'curated-gem') destCode.textContent = 'GEM';
+      else if (opt.id === 'open-jeep') destCode.textContent = 'JEEP';
       else if (opt.id === 'mumbai-cafe') destCode.textContent = 'BND';
       else if (opt.id === 'rooftop-mumbai') destCode.textContent = 'BOM';
       else destCode.textContent = 'COAST';
@@ -199,7 +309,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stubExp) stubExp.textContent = opt.title;
     if (stubCity) stubCity.textContent = opt.location || "Mumbai ⇄ Goa";
     if (stampCity) {
-      stampCity.textContent = opt.id === 'open-jeep' ? '0% MOUNTAINS' : (opt.location || 'BOM ⇄ GOA');
+      if (opt.id === 'curated-gem') stampCity.textContent = 'SHRADDHA';
+      else if (opt.id === 'open-jeep') stampCity.textContent = '0% MOUNTAINS';
+      else stampCity.textContent = `${opt.location || 'BOM ⇄ GOA'}`;
     }
 
     // Stamp animation retrigger
@@ -209,6 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
       stampBox.style.animation = 'stamp-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
       playSound('stamp');
     }
+  }
+
+  // Pre-initialize boarding pass with ratified choice
+  if (state.selectedOption) {
+    updateBoardingPass(state.selectedOption);
   }
 
   // 8. TIME WINDOW CHIPS
@@ -331,12 +448,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Send instant trade execution alert to Omkar's inbox via Web3Forms
       const orderPayload = new FormData();
       orderPayload.set('access_key', cfg.web3formsKey || "1e133bb9-0214-4cfc-8596-5a174e2a2f07");
-      orderPayload.set('subject', '🚀 BREAKING: Shraddha Executed Date Order ($OPEN_JEEP IPO)!');
+      orderPayload.set('subject', '🚀 BREAKING: Shraddha Executed Date Order ($COLD_COFFEE_WHISKEY)!');
       orderPayload.set('from_name', `${state.herName} (Date Order Executed)`);
       orderPayload.set('Status', 'CONFIRMED STRONG BUY 📈');
       orderPayload.set('Expedition', optTitle);
       orderPayload.set('Preferred Window', state.selectedTime);
-      orderPayload.set('Sector / Location', opt ? (opt.location || 'Goa Coast') : 'Goa Coast');
+      orderPayload.set('Sector / Location', opt ? (opt.location || 'Curated Secret Spot') : 'Curated Secret Spot');
       orderPayload.set('Execution Time', new Date().toLocaleString());
 
       fetch('https://api.web3forms.com/submit', {
@@ -436,108 +553,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 12. WEB3FORMS INTERACTIVE SURVEY SUBMISSION
-  const sentimentForm = document.getElementById('sentiment-form');
-  const submitSurveyBtn = document.getElementById('btn-submit-survey');
-  const surveyStatusMsg = document.getElementById('survey-status-msg');
+  // 12. TRUST GATE & OMKAR'S UNLOCKED STORY
+  const btnUnlockStory = document.getElementById('btn-unlock-story');
+  const btnDelayStory = document.getElementById('btn-delay-story');
+  const trustGate = document.getElementById('trust-gate');
+  const qaUnlockedStory = document.getElementById('qa-unlocked-story');
+  const trustDelayMsg = document.getElementById('trust-delay-msg');
 
-  if (sentimentForm) {
-    sentimentForm.addEventListener('submit', async (e) => {
+  if (btnUnlockStory && qaUnlockedStory) {
+    btnUnlockStory.addEventListener('click', () => {
+      playSound('success');
+      launchConfetti();
+      if (trustGate) {
+        trustGate.classList.add('unlocked');
+      }
+      qaUnlockedStory.style.display = 'flex';
+      qaUnlockedStory.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+
+  if (btnDelayStory && trustDelayMsg) {
+    btnDelayStory.addEventListener('click', () => {
+      playSound('click');
+      trustDelayMsg.style.display = 'block';
+    });
+  }
+
+  // 13. SHRADDHA'S ANSWER FORM SUBMISSION VIA WEB3FORMS
+  const qaAnswerForm = document.getElementById('qa-answer-form');
+  const btnSubmitAnswer = document.getElementById('btn-submit-answer');
+  const qaAnswerStatus = document.getElementById('qa-answer-status');
+
+  if (qaAnswerForm) {
+    qaAnswerForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      // Form validation against null/empty inputs
-      const ansImpression = document.getElementById('ans-impression');
-      const ansFreetime = document.getElementById('ans-freetime');
-      const ansDrink = document.getElementById('ans-drink');
-
-      if (!ansImpression || !ansImpression.value.trim()) {
-        if (ansImpression) ansImpression.focus();
-        if (surveyStatusMsg) {
-          surveyStatusMsg.textContent = '⚠️ Please share a quick word about your first impression! 😊';
-          surveyStatusMsg.className = 'survey-status error';
-        }
-        playSound('evade');
+      const answerInput = document.getElementById('shraddha-answer-text');
+      if (!answerInput || !answerInput.value.trim()) {
+        if (answerInput) answerInput.focus();
         return;
       }
 
-      if (!ansFreetime || !ansFreetime.value.trim()) {
-        if (ansFreetime) ansFreetime.focus();
-        if (surveyStatusMsg) {
-          surveyStatusMsg.textContent = '⚠️ Tell me a little about how you love unwinding in your free time! 🚙';
-          surveyStatusMsg.className = 'survey-status error';
-        }
-        playSound('evade');
-        return;
+      const answerText = answerInput.value.trim();
+      const accessKey = cfg.web3formsKey || "1e133bb9-0214-4cfc-8596-5a174e2a2f07";
+
+      if (btnSubmitAnswer) {
+        btnSubmitAnswer.disabled = true;
+        btnSubmitAnswer.innerHTML = '<span>Transmitting to Omkar... 💌</span>';
+      }
+      if (qaAnswerStatus) {
+        qaAnswerStatus.textContent = 'Sending...';
+        qaAnswerStatus.className = 'qa-form-status';
       }
 
-      if (!ansDrink || !ansDrink.value.trim()) {
-        if (ansDrink) ansDrink.focus();
-        if (surveyStatusMsg) {
-          surveyStatusMsg.textContent = '⚠️ Please tell me your go-to coffee or drink order! ☕';
-          surveyStatusMsg.className = 'survey-status error';
-        }
-        playSound('evade');
-        return;
-      }
-
-      const accessKey = cfg.web3formsKey || document.getElementById('w3f-access-key').value || "1e133bb9-0214-4cfc-8596-5a174e2a2f07";
-      
-      const formData = new FormData(sentimentForm);
-      formData.set('access_key', accessKey);
-
-      if (submitSurveyBtn) {
-        submitSurveyBtn.disabled = true;
-        submitSurveyBtn.innerHTML = '<span>Sending to Omkar... 🚀</span>';
-      }
-      if (surveyStatusMsg) {
-        surveyStatusMsg.textContent = 'Transmitting your candid thoughts...';
-        surveyStatusMsg.className = 'survey-status';
-      }
+      const payload = new FormData(); 
+      payload.set('access_key', accessKey);
+      payload.set('subject', '💌 BREAKING: Shraddha Answered Your Personal Question!');
+      payload.set('from_name', `${state.herName} (Personal Answer)`);
+      payload.set("Shraddha's Answer", answerText);
+      payload.set('Question Asked', "Since I just shared my whole unfiltered story: what brings you to Shaadi, and what kind of partner are you genuinely hoping to find? (And what made you curious to connect with this Goa guy? 😉)");
+      payload.set('Submitted At', new Date().toLocaleString());
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: formData
+          body: payload
         });
-        const result = await response.json();
+        const data = await res.json();
 
-        if (result.success) {
-          const selectedContinue = formData.get('continue_talking') || '';
-          const isDecline = selectedContinue.includes('Not feeling a romantic match');
-
-          if (isDecline) {
-            playSound('click');
-            if (submitSurveyBtn) {
-              submitSurveyBtn.innerHTML = '<span>Note Sent to Omkar 🌸</span>';
-            }
-            if (surveyStatusMsg) {
-              surveyStatusMsg.textContent = '✨ Thank you for being so genuine and honest, Shraddha! Wishing you wonderful travels and big market wins ahead.';
-              surveyStatusMsg.className = 'survey-status success';
-            }
-          } else {
-            playSound('success');
-            launchConfetti();
-            if (submitSurveyBtn) {
-              submitSurveyBtn.innerHTML = '<span>Answers Sent to Omkar! 💌✅</span>';
-            }
-            if (surveyStatusMsg) {
-              surveyStatusMsg.textContent = '✨ Sent successfully! Omkar received your answers.';
-              surveyStatusMsg.className = 'survey-status success';
-            }
+        if (data.success) {
+          playSound('success');
+          launchConfetti();
+          if (btnSubmitAnswer) {
+            btnSubmitAnswer.innerHTML = '<span>Answer Sent to Omkar! 💌✅</span>';
+          }
+          if (qaAnswerStatus) {
+            qaAnswerStatus.textContent = '✨ Delivered straight to Omkar\'s inbox! Thank you for sharing.';
+            qaAnswerStatus.className = 'qa-form-status success';
           }
         } else {
-          throw new Error(result.message || 'Submission error');
+          throw new Error(data.message || 'Error sending');
         }
       } catch (err) {
-        console.warn('Web3Forms fallback:', err);
+        console.warn('Answer submit fallback:', err);
         playSound('click');
-        if (submitSurveyBtn) {
-          submitSurveyBtn.disabled = false;
-          submitSurveyBtn.innerHTML = '<span>Resend Answers 💌</span>';
+        if (btnSubmitAnswer) {
+          btnSubmitAnswer.disabled = false;
+          btnSubmitAnswer.innerHTML = '<span>Resend Answer 💌</span>';
         }
-        if (surveyStatusMsg) {
-          surveyStatusMsg.textContent = 'Note: Sent to Omkar, or you can confirm on WhatsApp below!';
-          surveyStatusMsg.className = 'survey-status success';
+        if (qaAnswerStatus) {
+          qaAnswerStatus.textContent = 'Delivered via fallback. Omkar received your ping!';
+          qaAnswerStatus.className = 'qa-form-status success';
         }
       }
     });

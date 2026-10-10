@@ -32,11 +32,11 @@
       <span class="badge live-badge">HIGH CONVICTION 🚙</span>
     </div>
     <div class="nav-actions">
+      <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="nav-insta-btn" title="Omkar on Instagram">
+        <span>📸 @_.o._m</span>
+      </a>
       <button class="nav-btn sound-toggle" id="sound-btn" title="Sound Effects" aria-label="Toggle Sound">
         <span id="sound-icon">🔊</span> Sound: ON
-      </button>
-      <button class="nav-btn customize-btn" id="open-settings-btn" title="Personalize this page">
-        ⚙️ Customize
       </button>
     </div>
   </nav>
@@ -44,20 +44,60 @@
   <main class="container">
     <!-- HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div class="memo-pill">
-        <span class="pill-dot"></span>
-        <span class="pill-text">DALAL STREET ⇄ GOA COASTAL // OPEN JEEP MEMO 🚙🌴</span>
+      <div class="memo-pill approved-pill">
+        <span class="pill-dot green-dot"></span>
+        <span class="pill-text">EARNINGS CALL UPDATE: TERMS MUTUALLY APPROVED BY SHRADDHA 🟢🎉</span>
       </div>
 
       <h1 class="hero-title">
         The Most Accretive M&A of Q4: <br>
-        <span class="gradient-text">Open Jeep & Americano</span> 🚙☕
+        <span class="gradient-text">Cold Coffee & Whiskey</span> ☕🥃
       </h1>
 
       <p class="hero-subtitle">
-        Prepared exclusively for <strong class="highlight-text" id="her-name-display">Shraddha</strong>.
-        To the girl who dreams of exploring the world behind the wheel of an open-top jeep — wind in her hair, endless ocean horizons, and <span class="highlight-text">strictly zero mountain treks</span>.
+        Exclusively updated for <strong class="highlight-text" id="her-name-display">Shraddha</strong>.
+        Due diligence completed: IT guy precision confirmed, acoustic vocals unlocked, zero mountains guaranteed, and ready for Trader Shraddha's market volatility test.
       </p>
+
+      <!-- LIVE STOCK BREAKOUT / SURGE WIDGET -->
+      <div class="live-stock-widget" id="live-stock-widget">
+        <div class="stock-widget-top">
+          <div class="stock-identity">
+            <span class="live-pulse-dot"></span>
+            <span class="stock-name">NSE: $DATE</span>
+            <span class="stock-fullname">SHRADDHA ⇄ OMKAR VENTURE</span>
+          </div>
+          <div class="stock-circuit-tag">
+            <span class="circuit-icon">⚡</span>
+            <span>UPPER CIRCUIT LOCKED (+34.8%)</span>
+          </div>
+        </div>
+
+        <div class="stock-widget-main">
+          <div class="stock-price-display">
+            <span class="stock-currency">₹</span>
+            <span class="stock-price" id="live-stock-price">4,892.50</span>
+            <span class="stock-tick-arrow" id="stock-tick-arrow">▲</span>
+          </div>
+          <div class="stock-change-metrics">
+            <span class="stock-pts-gain" id="stock-pts-gain">+1,268.40</span>
+            <span class="stock-pct-gain" id="stock-pct-gain">(+34.82%)</span>
+            <span class="stock-today-tag">LIVE RALLY</span>
+          </div>
+          <div class="stock-sentiment-badge">
+            <span class="sentiment-glow"></span>
+            <span>ALL-TIME HIGH 🚀</span>
+          </div>
+        </div>
+
+        <!-- Real-time Live Order Feed -->
+        <div class="stock-live-feed">
+          <span class="feed-tag">LIVE ORDER FLOW</span>
+          <div class="feed-message-wrap">
+            <span class="feed-message" id="stock-feed-text">"BOM Market Maven approved Cold Coffee, Whiskey &amp; Open Jeep ☕🥃🚙"</span>
+          </div>
+        </div>
+      </div>
 
       <!-- Financial Metric Highlights / Terminal Card -->
       <div class="terminal-card">
@@ -78,128 +118,376 @@
               <span class="metric-sub">Strictly Zero Mountains</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Wind In Hair Ratio</span>
-              <span class="metric-val text-cyan">100% Top-Down</span>
-              <span class="metric-sub">Open Jeep Guaranteed</span>
+              <span class="metric-label">Beverage Asset</span>
+              <span class="metric-val text-cyan">Cold Brew & Whiskey</span>
+              <span class="metric-sub">Day ☕ / Evening 🥃</span>
             </div>
             <div class="metric-item">
               <span class="metric-label">Dividend Yield</span>
-              <span class="metric-val text-gold">Infinite Smiles</span>
-              <span class="metric-sub">Paid in Coastal Sunsets</span>
+              <span class="metric-val text-gold">Infinite Grooves</span>
+              <span class="metric-sub">Curated Playlist Ready 🎵</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Board Governance</span>
-              <span class="metric-val text-purple" id="seniority-badge">+1 Yr Wisdom</span>
-              <span class="metric-sub">Senior Partner (AUX Rights)</span>
+              <span class="metric-label">Managing Partner</span>
+              <span class="metric-val text-purple" id="seniority-badge">IT Guy + Singer</span>
+              <span class="metric-sub">Single Status Disputed 😉</span>
             </div>
           </div>
 
-          <!-- Mini Candlestick Graphic -->
-          <div class="chart-teaser">
+          <!-- Rising Japanese Candlestick Chart Terminal -->
+          <div class="chart-teaser candlestick-terminal">
             <div class="chart-info">
-              <span>Road Trip Sentiment: <strong>Breakout Rally Across Coastal Trails</strong></span>
-              <span class="chart-gain">+999.8% 🚙💨</span>
+              <div class="chart-info-left">
+                <span>Road Trip Sentiment ($DATE): <strong>Parabolic Breakout Rally</strong></span>
+                <span class="timeframe-badge">15M // BULL FLAG</span>
+              </div>
+              <div class="chart-info-right">
+                <span class="chart-price-live" id="chart-price-tag">₹4,892.50</span>
+                <span class="chart-gain" id="chart-live-gain">+999.8% 🚙💨</span>
+              </div>
             </div>
-            <div class="chart-svg-container">
-              <svg viewBox="0 0 600 80" class="mini-chart-svg" preserveAspectRatio="none">
+
+            <!-- Candlestick SVG Container -->
+            <div class="candlestick-chart-wrap" id="candlestick-chart-wrap">
+              <svg viewBox="0 0 660 160" class="candlestick-svg" id="candlestick-svg" preserveAspectRatio="none">
                 <defs>
-                  <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
-                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                  <linearGradient id="bullGreenGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#00b970" stop-opacity="0.7"/>
+                  </linearGradient>
+                  <linearGradient id="volGreenGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#00f090" stop-opacity="0.1"/>
                   </linearGradient>
                 </defs>
-                <path d="M0,70 Q 100,65 180,55 T 320,40 T 450,22 T 600,8 L 600,80 L 0,80 Z" fill="url(#chartGlow)" />
-                <path d="M0,70 Q 100,65 180,55 T 320,40 T 450,22 T 600,8" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" />
-                <circle cx="600" cy="8" r="5" fill="#10b981" class="pulsing-chart-dot" />
+
+                <!-- Grid Horizontal Lines -->
+                <line x1="10" y1="28" x2="575" y2="28" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="10" y1="65" x2="575" y2="65" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="10" y1="102" x2="575" y2="102" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="10" y1="138" x2="575" y2="138" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+
+                <!-- Right Axis Price Labels -->
+                <text x="585" y="32" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹5,200</text>
+                <text x="585" y="69" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹4,800</text>
+                <text x="585" y="106" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹4,400</text>
+                <text x="585" y="142" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹4,000</text>
+
+                <!-- VOLUME BARS (Institutional Inflow) -->
+                <rect x="25" y="150" width="10" height="10" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="55" y="145" width="10" height="15" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="85" y="148" width="10" height="12" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
+                <rect x="115" y="142" width="10" height="18" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="145" y="144" width="10" height="16" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="175" y="146" width="10" height="14" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
+                <rect x="205" y="138" width="10" height="22" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="235" y="132" width="10" height="28" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="265" y="140" width="10" height="20" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
+                <rect x="295" y="130" width="10" height="30" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="325" y="125" width="10" height="35" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="355" y="128" width="10" height="32" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
+                <rect x="385" y="120" width="10" height="40" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="415" y="112" width="10" height="48" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="445" y="105" width="10" height="55" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="475" y="98" width="10" height="62" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="505" y="90" width="10" height="70" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="535" y="82" width="10" height="78" fill="url(#volGreenGlow)" rx="1"/>
+
+                <!-- CANDLESTICKS SEQUENCE (RISING EXPONENTIALLY) -->
+                <!-- Candle 1: Base -->
+                <line x1="30" y1="130" x2="30" y2="148" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="25" y="135" width="10" height="10" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 2: Slight climb -->
+                <line x1="60" y1="126" x2="60" y2="142" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="55" y="129" width="10" height="9" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 3: Minor dip -->
+                <line x1="90" y1="127" x2="90" y2="144" stroke="#ef4444" stroke-width="1.2"/>
+                <rect x="85" y="130" width="10" height="8" fill="#ef4444" rx="1"/>
+
+                <!-- Candle 4: Rebound -->
+                <line x1="120" y1="118" x2="120" y2="136" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="115" y="121" width="10" height="11" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 5: Push up -->
+                <line x1="150" y1="112" x2="150" y2="130" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="145" y="115" width="10" height="12" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 6: Retest -->
+                <line x1="180" y1="114" x2="180" y2="132" stroke="#ef4444" stroke-width="1.2"/>
+                <rect x="175" y="118" width="10" height="8" fill="#ef4444" rx="1"/>
+
+                <!-- Candle 7: Bullish engulfing -->
+                <line x1="210" y1="102" x2="210" y2="124" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="205" y="106" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 8: Breakout candle -->
+                <line x1="240" y1="90" x2="240" y2="114" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="235" y="94" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 9: Slight breather -->
+                <line x1="270" y1="92" x2="270" y2="110" stroke="#ef4444" stroke-width="1.2"/>
+                <rect x="265" y="96" width="10" height="8" fill="#ef4444" rx="1"/>
+
+                <!-- Candle 10: Acceleration -->
+                <line x1="300" y1="80" x2="300" y2="102" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="295" y="84" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 11: Higher high -->
+                <line x1="330" y1="70" x2="330" y2="92" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="325" y="74" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 12: Mini consolidation -->
+                <line x1="360" y1="72" x2="360" y2="88" stroke="#ef4444" stroke-width="1.2"/>
+                <rect x="355" y="75" width="10" height="8" fill="#ef4444" rx="1"/>
+
+                <!-- Candle 13: Momentum expansion -->
+                <line x1="390" y1="58" x2="390" y2="80" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="385" y="62" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 14: Big green bull bar -->
+                <line x1="420" y1="46" x2="420" y2="70" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="415" y="50" width="10" height="17" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 15: Parabolic extension -->
+                <line x1="450" y1="36" x2="450" y2="58" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="445" y="40" width="10" height="16" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 16: Upper circuit push -->
+                <line x1="480" y1="26" x2="480" y2="48" stroke="#00f090" stroke-width="1.2"/>
+                <rect x="475" y="30" width="10" height="16" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 17: Super candle -->
+                <line x1="510" y1="18" x2="510" y2="38" stroke="#00f090" stroke-width="1.5"/>
+                <rect x="505" y="22" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+
+                <!-- Candle 18: THE ACTIVE LIVE RISING CANDLE -->
+                <g class="live-forming-candle" id="live-candle-group">
+                  <line id="live-candle-wick" x1="540" y1="10" x2="540" y2="32" stroke="#00f090" stroke-width="2"/>
+                  <rect id="live-candle-body" x="535" y="14" width="10" height="14" fill="#00f090" rx="1"/>
+                </g>
+
+                <!-- Current Price Tracking Line Across To Axis -->
+                <line id="price-tracking-line" class="live-tracking-line" x1="10" y1="14" x2="575" y2="14" stroke="#00f090" stroke-dasharray="4 3" stroke-width="1.4"/>
+                
+                <!-- Live Price Badge on Axis -->
+                <g id="live-price-axis-badge" transform="translate(580, 7)">
+                  <rect x="0" y="0" width="58" height="15" rx="3" fill="#00f090"/>
+                  <text id="live-price-axis-text" x="29" y="11" text-anchor="middle" fill="#051a11" font-size="8.5" font-weight="bold" font-family="JetBrains Mono">₹4,892</text>
+                </g>
               </svg>
+            </div>
+
+            <!-- Authentic Trading Terminal Metrics Footer -->
+            <div class="chart-footer-metrics">
+              <span>RSI (14): <strong class="text-green">89.2 (Ultra-Bullish)</strong></span>
+              <span>MACD: <strong class="text-cyan">Golden Cross Breakout 📈</strong></span>
+              <span>Volume: <strong class="text-gold">100% Institutional Conviction ⚡</strong></span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="hero-cta-group">
-        <a href="#itinerary" class="btn btn-primary" id="cta-view-itinerary">
-          <span>Choose Your Expedition 🚙✈️</span>
+        <a href="#ratified-terms" class="btn btn-primary" id="cta-view-ratified">
+          <span>Review Ratified Terms 📑✨</span>
         </a>
-        <a href="#thesis" class="btn btn-secondary" id="cta-view-thesis">
-          <span>Read The Investment Thesis 📑</span>
+        <a href="#execute" class="btn btn-secondary" id="cta-execute-shortcut">
+          <span>Lock In Date Order 🥂📈</span>
         </a>
       </div>
     </section>
 
-    <!-- SECTION 1: INVESTMENT THESIS -->
-    <section class="section" id="thesis">
-      <div class="section-tag">DUE DILIGENCE REPORT</div>
-      <h2 class="section-title">Why This Trade Beats The Benchmark</h2>
+    <!-- SECTION 1: THE RATIFIED TERMS & POST-CALL BRIEFING -->
+    <section class="section" id="ratified-terms">
+      <div class="memo-pill approved-pill">
+        <span class="pill-dot green-dot"></span>
+        <span class="pill-text">EXECUTIVE SUMMARY // TERMS RATIFIED BY SHRADDHA 🟢</span>
+      </div>
+      <div class="section-tag">EARNINGS CALL TRANSCRIPT</div>
+      <h2 class="section-title">The Agreed Term Sheet 📑✨</h2>
       <p class="section-desc">
-        A fundamental breakdown of why Dalal Street finance instincts + an open jeep cruising Goa's coastlines is the ultimate trade.
+        Due diligence successfully concluded. Both parties have officially reviewed the fundamentals and confirmed high conviction.
       </p>
 
-      <div class="thesis-grid">
-        <!-- Thesis 1: Open Jeep & Zero Mountains -->
-        <div class="thesis-card highlight-card">
-          <div class="card-icon">🚙🌴</div>
-          <div class="card-badge">Terrain Strategy</div>
-          <h3 class="card-title">The Open Jeep & Zero-Mountains Mandate</h3>
-          <p class="card-text">
-            You want to roam the world with top-down 4x4 freedom, breezy air, and endless flat horizons — with zero desire to freeze on rocky mountain treks. We have officially <strong>shorted all mountains</strong> to 0. Goa was practically engineered for open jeeps, palm trees, and ocean views at sea level.
-          </p>
+      <div class="transcript-card">
+        <div class="transcript-grid">
+          <div class="transcript-item">
+            <span class="transcript-label">📞 Call Sentiment</span>
+            <span class="transcript-val text-green">"Felt good, curious to know more"</span>
+            <span class="transcript-sub">Zero awkwardness verified</span>
+          </div>
+
+          <div class="transcript-item">
+            <span class="transcript-label">🌟 First Impression</span>
+            <span class="transcript-val text-cyan">"Decent guy, easy to communicate with"</span>
+            <span class="transcript-sub">Passed initial vibe-check</span>
+          </div>
+
+          <div class="transcript-item">
+            <span class="transcript-label">🎵 Downtime Protocol</span>
+            <span class="transcript-val text-gold">"Listen to music & groove on some"</span>
+            <span class="transcript-sub">Acoustic singer assigned to playlist 🎶</span>
+          </div>
+
+          <div class="transcript-item">
+            <span class="transcript-label">☕🥃 Beverage Allocation</span>
+            <span class="transcript-val text-white">Cold Coffee & Premium Whiskey</span>
+            <span class="transcript-sub">Liquid assets locked in</span>
+          </div>
+
+          <div class="transcript-item">
+            <span class="transcript-label">🎲 Preferred Venue</span>
+            <span class="transcript-val text-green">"Surprise me with a curated hidden gem"</span>
+            <span class="transcript-sub">Zero mountains guaranteed • Open Jeep confirmed 🚙</span>
+          </div>
+
+          <div class="transcript-item">
+            <span class="transcript-label">📈 Trading Mentorship</span>
+            <span class="transcript-val text-purple">"Pending market volatility test 😉"</span>
+            <span class="transcript-sub">Student ready with charts</span>
+          </div>
         </div>
 
-        <!-- Thesis 2: Senior Partner Factor -->
-        <div class="thesis-card">
-          <div class="card-icon">👑</div>
-          <div class="card-badge">Governance Advantage</div>
-          <h3 class="card-title">The Senior Partner Factor</h3>
-          <p class="card-text">
-            Being exactly 1 year older gives you full executive authority. You bring market discipline, seasoned instincts, and the non-negotiable right to control the AUX chord and select the jeep soundtrack.
-          </p>
+        <!-- Special Answer Callout to Her Question with Trust Gate & Answer Box -->
+        <div class="qa-highlight-box" id="qa-box">
+          <div class="qa-q">
+            <span class="qa-tag">SHRADDHA'S QUESTION:</span>
+            <p class="qa-quote">"What brings you on a matrimonial app, how come a singer is single?"</p>
+          </div>
+
+          <!-- TRUST GATE (Question before unlocking Omkar's personal answer) -->
+          <div class="trust-gate" id="trust-gate">
+            <div class="trust-gate-badge">🔒 A PERSONAL NOTE &amp; TRUST CHECK</div>
+            <h4 class="trust-gate-title">This is something deeply personal to me.</h4>
+            <p class="trust-gate-desc">
+              I rarely share what I went through with anyone, but sharing this means I am placing genuine trust in you. Are you ready and do you have a few peaceful, free minutes to read my honest story right now?
+            </p>
+            <div class="trust-gate-actions">
+              <button type="button" class="btn btn-primary btn-sm" id="btn-unlock-story">
+                <span>Yes, I'm ready &amp; have time to read 🤍</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-delay-story">
+                <span>Save for later / Tell me on our date ☕</span>
+              </button>
+            </div>
+            <div class="trust-delay-msg" id="trust-delay-msg" style="display: none;">
+              <span>No problem at all! We can chat about it in person over cold coffee and whiskey. 😊 (You can unlock it above anytime if you change your mind!)</span>
+            </div>
+          </div>
+
+          <!-- UNLOCKED STORY (Revealed when she clicks Yes) -->
+          <div class="qa-a-unlocked" id="qa-unlocked-story" style="display: none;">
+            <div class="unlocked-header">
+              <span class="qa-tag text-green">OMKAR'S HONEST STORY &amp; ANSWER 🕊️</span>
+              <span class="trust-verified-pill">TRUST UNLOCKED</span>
+            </div>
+
+            <div class="story-chapters-grid">
+              <!-- Chapter 1 -->
+              <div class="story-chapter-card">
+                <span class="story-chapter-tag">01 // WHO I AM</span>
+                <p>
+                  I live in Goa. At first glance, I probably look like a very calm, simple boy. But once you read through this and get to know me, you'll realize: yes, I'm actually a cute, mischievous guy - total mastikhor at heart! 😜 By day, I'm a full-stack developer; outside of work, I sing, create videos, and game. I have an almost endless amount of patience (though fair warning: once it truly runs out, I can be the most <em>'chidchida'</em> person in the room! 😅). I don't cry easily in real life, but emotional movie scenes get me every single time.
+                </p>
+                <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="story-insta-pill">
+                  <span>📸 Find some of my music &amp; vibes on Insta: <strong>@_.o._m</strong> ↗</span>
+                </a>
+              </div>
+
+              <!-- Chapter 2 -->
+              <div class="story-chapter-card">
+                <span class="story-chapter-tag">02 // DISCIPLINE, TRAVEL PASSION &amp; CANDIDS</span>
+                <p>
+                  My father was a teacher, so growing up was very disciplined. Because of that, I never really had many friends to roam around or travel with. But I have always had this deep passion to roam and explore places, just like how you do. Please take me along if possible - I would genuinely love to be a part of that journey with you. And since I love photography, you'll always have someone to click some amazing, effortless candids of you wherever we go! 📸
+                </p>
+                <p class="story-insta-sub">
+                  📸 Want to see some of my photography style? Connect on Insta: <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="story-inline-link"><strong>@_.o._m</strong> ↗</a>
+                </p>
+              </div>
+
+              <!-- Chapter 3 -->
+              <div class="story-chapter-card highlight-story">
+                <span class="story-chapter-tag text-green">03 // TRANSPARENCY: PAST MISTAKES, 4-YEAR RESET &amp; REDIRECTION</span>
+                <p>
+                  I want to be completely transparent with you: you are not the first girl I have liked or been obsessed with. Currently, yes, I am definitely obsessed with you! But in my past, I made a lot of mistakes - had girlfriends in college, messed up in relationships, and went through total chaos.
+                </p>
+                <p style="margin-top: 10px;">
+                  After an old relationship ended 6 years ago back in 2020, I literally lost all hope in love for 4 whole years. During that phase, I kept completely to myself, stayed disciplined, and worked out in the gym. But in 2024, I found a girl and approached her - which turned out to be the biggest mistake of my life. I went through heavy chaos and heartbreak, but that pain forced me to look in the mirror, take accountability, and completely redirect my life.
+                </p>
+                <p style="margin-top: 10px;">
+                  I chose never to let those mistakes make me bitter or closed off. I redirected, found my inner peace, and that redirection is what brought me right here to Shaadi, and ultimately to connecting with you. I still believe good, genuine people exist, and that true sincerity is always worth holding out for.
+                </p>
+              </div>
+
+              <!-- Chapter 4 -->
+              <div class="story-chapter-card highlight-story">
+                <span class="story-chapter-tag text-cyan">04 // WHY SHAADI ON MY OWN &amp; THE GOA PERSPECTIVE</span>
+                <p>
+                  I am on Shaadi completely on my own - nobody forced me. My thought process is simple: before jumping to involve families, I first want to truly know that person myself. Understand who they are, match vibes, and build real trust. If it goes smooth like butter, that's what makes it beautiful na? If things go really well, only then does it make sense to tell our parents.
+                </p>
+                <p style="margin-top: 10px;">
+                  The biggest barrier on matrimonial apps has been the Goa myth. Almost every conversation hit a wall the moment they realized I live in Goa - they'd ask <em>"How will this ever work?"</em> and fade away. But nobody ever thought: <strong>who said only the woman has to leave her world and relocate to the guy's house? Why can't it be ulta?</strong> A Goa guy can move to Mumbai too. When a connection is real, location is a logistical detail, not a deal-breaker.
+                </p>
+              </div>
+
+              <!-- Chapter 5 -->
+              <div class="story-chapter-card">
+                <span class="story-chapter-tag text-purple">05 // NOTICING YOU &amp; WHY I'M HERE</span>
+                <p>
+                  I first saw you on Shaadi, Shraddha. Even though you are slightly older than me, I chose to connect without a second thought - because honestly, how could anyone pass on such a beautiful woman, right? We then connected on WhatsApp. I know you aren't really someone who likes texting or chatting a lot, yet you still make the effort to reply to me, and that means the absolute world to me. The fact that you take out your time from your busy day to talk with me is huge. And after our call felt so natural and effortless, I wanted to put in real effort to show you how much I appreciate you. That's why I built this whole prospectus for you, and that's why I'm here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reciprocal Question for Shraddha with Answer Box -->
+          <div class="qa-reciprocal" id="qa-reciprocal-section">
+            <span class="qa-tag text-gold">OMKAR'S QUESTION FOR THE SENIOR PARTNER 💭:</span>
+            <p class="qa-reciprocal-q">
+              "Since I just shared my whole unfiltered story: what brings you to Shaadi, and what kind of partner are you genuinely hoping to find? (And what made you curious to connect with this Goa guy? 😉)"
+            </p>
+
+            <!-- Interactive Answer Input Form -->
+            <form class="qa-answer-form" id="qa-answer-form">
+              <label for="shraddha-answer-text" class="qa-input-label">Your thoughts (Take your time, no wrong answers!):</label>
+              <textarea 
+                id="shraddha-answer-text" 
+                name="shraddha_answer" 
+                rows="3" 
+                class="qa-textarea" 
+                placeholder="Share your thoughts here... ✍️" 
+                required
+              ></textarea>
+              
+              <div class="qa-form-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="btn-submit-answer">
+                  <span>Send Answer to Omkar 💌</span>
+                </button>
+                <div class="qa-form-status" id="qa-answer-status"></div>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <!-- Thesis 3: World Traveler Meets Local Pilot -->
-        <div class="thesis-card">
-          <div class="card-icon">🌍</div>
-          <div class="card-badge">Global Wanderlust</div>
-          <h3 class="card-title">The Globe-Trotter & Coastal Pilot</h3>
-          <p class="card-text">
-            You've stamped passports across continents and collected world-class travel stories. I haven't seen all seven wonders yet, which makes me the ideal audience for your travel diaries, and your dedicated pilot for Goa's quietest beach roads.
-          </p>
-        </div>
-
-        <!-- Thesis 4: 50-Minute Flight Arbitrage -->
-        <div class="thesis-card">
-          <div class="card-icon">💎</div>
-          <div class="card-badge">Statistically Rare Outlier</div>
-          <h3 class="card-title">The 50-Minute Flight Arbitrage</h3>
-          <p class="card-text">
-            BOM to Goa is a 50-minute flight — literally faster than driving from Bandra to Nariman Point in Friday rush hour. Finding a cute trader on Shaadi who loves open jeeps and avoids mountain hiking is a 5-sigma mathematical miracle.
-          </p>
-        </div>
-
-        <!-- Thesis 5: Learn Stock Trading -->
-        <div class="thesis-card highlight-card">
-          <div class="card-icon">📈📚</div>
-          <div class="card-badge">Knowledge Arbitrage</div>
-          <h3 class="card-title">Trading Mentorship Clause</h3>
-          <p class="card-text">
-            If permitted by the Senior Partner, I genuinely want to learn how the stock market and trading actually work from you — how to decode charts, manage risk, and make money in the markets. In exchange, I offer lifetime complimentary open-jeep driving, coffee, and coastal navigation.
-          </p>
+        <!-- Direct CTA to Execution -->
+        <div class="transcript-cta-box">
+          <p class="transcript-cta-note">⚡ All terms mutually ratified. Only one final step remains:</p>
+          <a href="#execute" class="btn btn-primary btn-ratified-cta">
+            <span>Execute Date Order (Lock It In) 🥂📈</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: INTERACTIVE BOARDING PASS & ITINERARY -->
-    <section class="section" id="itinerary">
-      <div class="section-tag">EXPEDITION ALLOCATION</div>
-      <h2 class="section-title">Select Your Preferred Asset Class</h2>
+    <!-- SECTION 2: RATIFIED BOARDING PASS -->
+    <section class="section" id="boarding-pass-section">
+      <div class="section-tag">OFFICIAL TRAVEL INSTRUMENT</div>
+      <h2 class="section-title">Your Ratified Boarding Pass 🎟️✨</h2>
       <p class="section-desc">
-        Pick your style below — from an open jeep coastal cruise in Goa to an artisanal roaster in Mumbai. Watch your Boarding Pass update live.
+        Pre-cleared and stamped based on your approved terms. Next stop: The Curated Hidden Gem, Cold Coffee & Whiskey, and strictly zero mountain hiking.
       </p>
-
-      <!-- Option Picker Cards -->
-      <div class="options-container" id="options-grid">
-        <!-- Injected via JavaScript from config.js -->
-      </div>
 
       <!-- Real-time Interactive Boarding Pass Card -->
       <div class="boarding-pass-wrapper">
@@ -235,19 +523,19 @@
                   <span class="route-line"></span>
                 </div>
                 <div class="route-city">
-                  <span class="city-code" id="pass-dest-code">JEEP</span>
-                  <span class="city-name" id="pass-dest-name">Goa (Open Coast)</span>
+                  <span class="city-code" id="pass-dest-code">GEM</span>
+                  <span class="city-name" id="pass-dest-name">Curated Hidden Gem 🎲</span>
                 </div>
               </div>
 
               <div class="pass-row detail-row">
                 <div class="pass-col">
-                  <span class="pass-label">TERRAIN & TIMING</span>
-                  <span class="pass-val text-green" id="pass-date-display">Sea Level (0m Altitude)</span>
+                  <span class="pass-label">BEVERAGES</span>
+                  <span class="pass-val text-green" id="pass-date-display">Cold Brew & Whiskey 🥃</span>
                 </div>
                 <div class="pass-col">
                   <span class="pass-label">LOCATION</span>
-                  <span class="pass-val text-cyan" id="pass-gate-display">Palm-Lined Coastal Trail</span>
+                  <span class="pass-val text-cyan" id="pass-gate-display">Curated Secret Spot</span>
                 </div>
                 <div class="pass-col">
                   <span class="pass-label">SEAT</span>
@@ -259,9 +547,9 @@
             <!-- Animated Passport Stamp -->
             <div class="stamp-box" id="passport-stamp">
               <div class="stamp-circle">
-                <span class="stamp-country" id="stamp-city-text">GOA COAST</span>
-                <span class="stamp-date">APPROVED</span>
-                <span class="stamp-status">★ 0% MOUNTAINS ★</span>
+                <span class="stamp-country" id="stamp-city-text">SHRADDHA</span>
+                <span class="stamp-date">VERIFIED</span>
+                <span class="stamp-status">★ TERMS RATIFIED ★</span>
               </div>
             </div>
           </div>
@@ -279,7 +567,7 @@
             <div class="stub-details">
               <div>
                 <span class="pass-label">EXPERIENCE</span>
-                <span class="stub-val text-white" id="stub-exp-name">Open Jeep Coastal Cruise</span>
+                <span class="stub-val text-white" id="stub-exp-name">The Curated Hidden Gem</span>
               </div>
               <div>
                 <span class="pass-label">SECTOR</span>
@@ -299,214 +587,12 @@
       </div>
     </section>
 
-    <!-- SECTION 3: PROJECTED CHEMISTRY TRAJECTORY -->
-    <section class="section" id="trajectory">
-      <div class="section-tag">TECHNICAL ANALYSIS</div>
-      <h2 class="section-title">Projected Chemistry Index Over Time</h2>
-      <p class="section-desc">
-        Simulation of the open-air road trip based on macro sentiment indicators.
-      </p>
-
-      <div class="timeline-chart-card">
-        <div class="timeline-steps">
-          <div class="timeline-node active">
-            <div class="node-time">00 Min</div>
-            <div class="node-pill">Ignition & Opening Bell</div>
-            <h4>Jeep Doors Off, First Greeting</h4>
-            <p>"Hey, great to meet you!" You take the front seat, plug in your phone, smiles confirmed.</p>
-          </div>
-          <div class="timeline-node">
-            <div class="node-time">25 Min</div>
-            <div class="node-pill">Open Highway</div>
-            <h4>Travel Chronicles & Wind in Hair</h4>
-            <p>Cruising coastal curves while trading stories of favorite world cities and wild stock trades.</p>
-          </div>
-          <div class="timeline-node">
-            <div class="node-time">55 Min</div>
-            <div class="node-pill">Peak Sentiment</div>
-            <h4>Shaadi.com & Mountain Roast</h4>
-            <p>Roasting Shaadi algorithm bios and mutually rejoicing that there are zero steep mountains to hike.</p>
-          </div>
-          <div class="timeline-node">
-            <div class="node-time">90 Min+</div>
-            <div class="node-pill">All-Time High</div>
-            <h4>Sunset Coffee on the Beach</h4>
-            <p>Pulling up to a secret seaside cafe right as the golden sun dips beneath the sea.</p>
-          </div>
-        </div>
-      </div>
-    <!-- SECTION: THE POST-CALL FIRESIDE Q&A (INTERACTIVE SESSION) -->
-    <section class="section" id="interactive-qa">
-      <div class="memo-pill">
-        <span class="pill-dot"></span>
-        <span class="pill-text">FOUNDER-TO-FOUNDER CHECK-IN // POST-CALL BRIEFING ☕</span>
-      </div>
-      <div class="section-tag">INTERACTIVE FIRESIDE Q&A</div>
-      <h2 class="section-title">A Quick Check-In (Off The Record) 💌</h2>
-      <p class="section-desc">
-        It was truly wonderful talking to you on the call earlier. Before we lock in any coffee or open jeep trades, here is a relaxed, honest check-in. Zero pressure, 100% candor.
-      </p>
-
-      <div class="survey-card">
-        <form id="sentiment-form" class="survey-form">
-          <!-- Hidden inputs for Web3Forms -->
-          <input type="hidden" name="access_key" id="w3f-access-key" value="1e133bb9-0214-4cfc-8596-5a174e2a2f07">
-          <input type="hidden" name="subject" value="New Date Pitch Response from Shraddha! 💌">
-          <input type="hidden" name="from_name" value="Shraddha (Date Pitch Response)">
-
-          <!-- Question 1: Call Experience -->
-          <div class="survey-group">
-            <label class="survey-label">
-              <span class="q-num">01.</span> How was your experience on our phone call?
-            </label>
-            <div class="survey-options" role="radiogroup">
-              <label class="radio-pill">
-                <input type="radio" name="call_experience" value="Super easy & comfortable" checked>
-                <span>✨ Super easy & comfortable</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="call_experience" value="Pleasantly surprising">
-                <span>😊 Pleasantly surprising</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="call_experience" value="Time flew by faster than expected">
-                <span>⏳ Time flew by fast</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="call_experience" value="Felt good, curious to know more">
-                <span>💭 Felt good, curious to know more</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Question 2: First Impression -->
-          <div class="survey-group">
-            <label class="survey-label" for="ans-impression">
-              <span class="q-num">02.</span> What was your unfiltered first impression / feel about me? <span class="required-star">*</span>
-            </label>
-            <textarea id="ans-impression" name="first_impression" class="survey-input survey-textarea" rows="2" placeholder="Be completely candid! (e.g. calm demeanor, sounded genuine, quirky humor, good listener...)" required></textarea>
-          </div>
-
-          <!-- Question 3: Free Time -->
-          <div class="survey-group">
-            <label class="survey-label" for="ans-freetime">
-              <span class="q-num">03.</span> What’s your absolute favorite thing to do in your free time? <span class="required-star">*</span>
-              <span class="survey-subhint">(I know you're not a big text-chatter, so how do you love unwinding when you're off the trading screens?)</span>
-            </label>
-            <input type="text" id="ans-freetime" name="free_time_activity" class="survey-input" placeholder="e.g. long drives, watching charts, exploring cozy cafes, planning travels, music..." required>
-          </div>
-
-          <!-- Question 4: Date Destination -->
-          <div class="survey-group">
-            <label class="survey-label">
-              <span class="q-num">04.</span> If you could pick any setting for our first in-person date, what would it be?
-            </label>
-            <div class="survey-options" role="radiogroup">
-              <label class="radio-pill">
-                <input type="radio" name="date_destination" value="Open Jeep cruise along Goa coastal roads 🚙" checked>
-                <span>🚙 Open Jeep cruise along Goa coast (0% mountains!)</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="date_destination" value="Cozy artisanal coffee roaster in Mumbai (Bandra/Colaba) ☕">
-                <span>☕ Cozy artisanal coffee roaster in Mumbai</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="date_destination" value="Quiet sunset walk & gelato 🌅">
-                <span>🌅 Quiet sunset walk & gelato</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="date_destination" value="Surprise me with a curated hidden gem 🎲">
-                <span>🎲 Surprise me with a curated hidden gem</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Question 5: Her Go-To Drink -->
-          <div class="survey-group">
-            <label class="survey-label" for="ans-drink">
-              <span class="q-num">05.</span> Bonus due diligence: What is your exact go-to coffee or drink order? <span class="required-star">*</span>
-            </label>
-            <input type="text" id="ans-drink" name="favorite_drink" class="survey-input" placeholder="e.g. Iced Americano, Oat Flat White, Tender Coconut, Matcha, Pour-over..." required>
-          </div>
-
-          <!-- Question 6: Learn Stock Market From Her -->
-          <div class="survey-group">
-            <label class="survey-label">
-              <span class="q-num">06.</span> Honest proposition: Would you be open to teaching me how stock market trading works?
-              <span class="survey-subhint">(I genuinely want to learn how trading works and how you grow money in the markets — will you take me on as an apprentice?)</span>
-            </label>
-            <div class="survey-options" role="radiogroup">
-              <label class="radio-pill pill-green">
-                <input type="radio" name="teach_trading" value="Deal! First trading lesson over coffee 📊☕" checked>
-                <span>📊 Deal! First trading lesson over coffee</span>
-              </label>
-              <label class="radio-pill pill-green">
-                <input type="radio" name="teach_trading" value="Only if you're a dedicated student & bring good coffee ☕">
-                <span>☕ Only if you're a dedicated student</span>
-              </label>
-              <label class="radio-pill pill-green">
-                <input type="radio" name="teach_trading" value="Haha, let's see how you handle market volatility first 😉">
-                <span>📈 Let's test your risk appetite first 😉</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Question 7: Green Flag / Would you like to continue talking? -->
-          <div class="survey-group highlight-survey-group">
-            <div class="green-flag-banner">
-              <span class="gf-badge">🟢 CERTIFIED GREEN FLAG ZONE</span>
-              <p class="gf-text">
-                Full disclosure: I'm a simple guy with zero mind games. In a modern dating scene where people often end up ghosting, I really appreciate honest, authentic communication.
-              </p>
-            </div>
-            <label class="survey-label">
-              <span class="q-num">07.</span> Would you like to continue talking to me?
-            </label>
-            <div class="survey-options" role="radiogroup">
-              <label class="radio-pill pill-green">
-                <input type="radio" name="continue_talking" value="Yes, definitely! Let's keep talking 📈" checked>
-                <span>📈 Yes, definitely! Let's keep talking</span>
-              </label>
-              <label class="radio-pill pill-green">
-                <input type="radio" name="continue_talking" value="Yes, let's take it slow and steady ☕">
-                <span>☕ Yes, let's take it slow and steady</span>
-              </label>
-              <label class="radio-pill pill-green">
-                <input type="radio" name="continue_talking" value="Tell me more about those Goa beach drives first 🚙">
-                <span>🚙 Tell me more about those Goa beach drives first</span>
-              </label>
-              <label class="radio-pill pill-neutral">
-                <input type="radio" name="continue_talking" value="Not feeling a romantic match, but this genuinely made my day / wishing you the best! 🌸">
-                <span>🌸 Not feeling a romantic match, but this genuinely made my day</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Question 8: Questions for Omkar -->
-          <div class="survey-group">
-            <label class="survey-label" for="ans-questions">
-              <span class="q-num">08.</span> Your turn on the mic: Any questions, doubts, or curiosities for me?
-            </label>
-            <textarea id="ans-questions" name="questions_for_omkar" class="survey-input survey-textarea" rows="2" placeholder="Ask me anything at all — about life, Goa, travel, or anything you're curious about!"></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="survey-submit-wrap">
-            <button type="submit" class="btn btn-primary btn-submit-survey" id="btn-submit-survey">
-              <span>Send Answers to Omkar 💌</span>
-            </button>
-            <div class="survey-status" id="survey-status-msg"></div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- SECTION 4: THE ORDER EXECUTION TERMINAL (THE ASK) -->
+    <!-- SECTION 3: THE ORDER EXECUTION TERMINAL (THE ASK) -->
     <section class="section execution-section" id="execute">
-      <div class="section-tag text-green">TRADE EXECUTION</div>
-      <h2 class="section-title">Execute The Order</h2>
+      <div class="section-tag text-green">FINAL STEP // TRADE EXECUTION</div>
+      <h2 class="section-title">Lock In The Date Order 🥂📈</h2>
       <p class="section-desc">
-        No margin calls, no steep hikes. Just pick your preferred window and hit Execute.
+        All terms mutually approved! Select our preferred timing window below and hit Execute Order to confirm.
       </p>
 
       <div class="trade-terminal">
@@ -522,6 +608,7 @@
 
         <div class="contract-terms">
           <div class="term-bullet">✔️ <strong>The Zero-Mountains Guarantee:</strong> Strictly 0 meters of mountain hiking. 100% open jeep cruising, sea-level breezes, and sunset horizon.</div>
+          <div class="term-bullet">✔️ <strong>Dedicated Candid Photographer:</strong> Guaranteed aesthetic candids clicked for your travels, zero awkward poses 📸</div>
           <div class="term-bullet">✔️ <strong>Trading Mentorship Clause:</strong> You teach me how trading works and how to grow money in the markets (if you're open to taking on a student), and I'll handle all the coffee, jeep routes, and good vibes.</div>
           <div class="term-bullet">✔️ <strong>Senior Partner Authority:</strong> You get permanent AUX cord privileges and unilateral veto power over the playlist.</div>
           <div class="term-bullet">✔️ <strong>World Traveler Clause:</strong> Unlimited airtime to discuss any country you loved exploring or plan to visit next.</div>
@@ -580,6 +667,9 @@
           <a href="#" class="btn btn-whatsapp" id="btn-whatsapp-send" target="_blank" rel="noopener noreferrer">
             <span>Confirm on WhatsApp 💬</span>
           </a>
+          <a href="https://www.instagram.com/p/DdeaDreNdOr/#" class="btn btn-insta" id="btn-insta-connect" target="_blank" rel="noopener noreferrer">
+            <span>Connect on Instagram 📸 (@_.o._m)</span>
+          </a>
           <button class="btn btn-copy" id="btn-copy-trade">
             <span>📋 Copy Trade Receipt</span>
           </button>
@@ -614,44 +704,6 @@
       </div>
     </div>
 
-    <!-- SETTINGS / PERSONALIZATION MODAL -->
-    <div class="modal-overlay" id="settings-modal" role="dialog" aria-modal="true">
-      <div class="modal-card settings-card">
-        <div class="settings-header">
-          <h3>⚙️ Personalize Your Pitch</h3>
-          <button class="modal-close" id="settings-close-btn">✕</button>
-        </div>
-        <p class="modal-sub">
-          Customize her name, your name, and your WhatsApp number so she can RSVP with a single tap!
-        </p>
-        <form id="settings-form" class="settings-form">
-          <div class="form-group">
-            <label for="cfg-her-name">Her Name:</label>
-            <input type="text" id="cfg-her-name" placeholder="e.g. Pooja, Rhea, Aditi..." />
-          </div>
-          <div class="form-group">
-            <label for="cfg-your-name">Your Name:</label>
-            <input type="text" id="cfg-your-name" placeholder="Your name" />
-          </div>
-          <div class="form-group">
-            <label for="cfg-phone">Your WhatsApp Number (with country code):</label>
-            <input type="text" id="cfg-phone" placeholder="e.g. 919876543210 (no + or spaces)" />
-            <small>When she clicks "Confirm on WhatsApp", it opens a chat directly with you!</small>
-          </div>
-          <div class="form-group">
-            <label for="cfg-w3f-key">Web3Forms Access Key (Optional for instant email):</label>
-            <input type="text" id="cfg-w3f-key" placeholder="Paste your Web3Forms access key here" />
-            <small>Free from web3forms.com - sends her responses straight to your inbox!</small>
-          </div>
-          <div class="settings-btns">
-            <button type="submit" class="btn btn-primary">Save & Apply</button>
-            <button type="button" class="btn btn-secondary" id="btn-copy-custom-link">🔗 Copy Shareable Link</button>
-            <button type="button" class="btn btn-secondary" id="settings-back-btn">← Back</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
     <!-- Floating Back to Top Button -->
     <button class="floating-back-btn" id="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
       <span>↑ Back to Top</span>
@@ -662,6 +714,11 @@
   <footer class="footer">
     <div class="footer-content">
       <p>Crafted with high conviction, open-top 4x4 energy & coastal affection. Deployed on GitHub Pages.</p>
+      <div class="footer-social-wrap">
+        <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="footer-insta-pill">
+          <span>📸 Connect with Omkar on Instagram: <strong>@_.o._m</strong> ↗</span>
+        </a>
+      </div>
       <p class="footer-sub">Ticker $OPEN_JEEP • Mountains permanently shorted • Rated <strong>STRONG BUY</strong>.</p>
     </div>
   </footer>
