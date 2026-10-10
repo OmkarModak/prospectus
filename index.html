@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONFIDENTIAL: Investment Memorandum & Travel Brief ($JEEP_BOM_GOA)</title>
-  <meta name="description" content="An unsolicited, highly accretive proposal: Open Jeep coastal exploration, zero mountains, and Dalal Street market wit.">
-  
+  <meta name="description"
+    content="An unsolicited, highly accretive proposal: Open Jeep coastal exploration, zero mountains, and Dalal Street market wit.">
+
   <!-- Modern Typography from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- Canvas for Confetti -->
   <canvas id="confetti-canvas"></canvas>
@@ -32,7 +37,8 @@
       <span class="badge live-badge">HIGH CONVICTION 🚙</span>
     </div>
     <div class="nav-actions">
-      <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="nav-insta-btn" title="Omkar on Instagram">
+      <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer"
+        class="nav-insta-btn" title="Omkar on Instagram">
         <span>📸 @_.o._m</span>
       </a>
       <button class="nav-btn sound-toggle" id="sound-btn" title="Sound Effects" aria-label="Toggle Sound">
@@ -56,7 +62,8 @@
 
       <p class="hero-subtitle">
         Exclusively updated for <strong class="highlight-text" id="her-name-display">Shraddha</strong>.
-        Due diligence completed: IT guy precision confirmed, acoustic vocals unlocked, zero mountains guaranteed, and ready for Trader Shraddha's market volatility test.
+        Due diligence completed: IT guy precision confirmed, acoustic vocals unlocked, zero mountains guaranteed, and
+        ready for Trader Shraddha's market volatility test.
       </p>
 
       <!-- LIVE STOCK BREAKOUT / SURGE WIDGET -->
@@ -94,7 +101,8 @@
         <div class="stock-live-feed">
           <span class="feed-tag">LIVE ORDER FLOW</span>
           <div class="feed-message-wrap">
-            <span class="feed-message" id="stock-feed-text">"BOM Market Maven approved Cold Coffee, Whiskey &amp; Open Jeep ☕🥃🚙"</span>
+            <span class="feed-message" id="stock-feed-text">"BOM Market Maven approved Cold Coffee, Whiskey &amp; Open
+              Jeep ☕🥃🚙"</span>
           </div>
         </div>
       </div>
@@ -152,20 +160,20 @@
               <svg viewBox="0 0 660 160" class="candlestick-svg" id="candlestick-svg" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="bullGreenGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#00b970" stop-opacity="0.7"/>
+                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#00b970" stop-opacity="0.7" />
                   </linearGradient>
                   <linearGradient id="volGreenGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.45"/>
-                    <stop offset="100%" stop-color="#00f090" stop-opacity="0.1"/>
+                    <stop offset="0%" stop-color="#00f090" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="#00f090" stop-opacity="0.1" />
                   </linearGradient>
                 </defs>
 
                 <!-- Grid Horizontal Lines -->
-                <line x1="10" y1="28" x2="575" y2="28" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
-                <line x1="10" y1="65" x2="575" y2="65" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
-                <line x1="10" y1="102" x2="575" y2="102" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
-                <line x1="10" y1="138" x2="575" y2="138" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3"/>
+                <line x1="10" y1="28" x2="575" y2="28" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
+                <line x1="10" y1="65" x2="575" y2="65" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
+                <line x1="10" y1="102" x2="575" y2="102" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
+                <line x1="10" y1="138" x2="575" y2="138" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 3" />
 
                 <!-- Right Axis Price Labels -->
                 <text x="585" y="32" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹5,200</text>
@@ -174,107 +182,109 @@
                 <text x="585" y="142" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">₹4,000</text>
 
                 <!-- VOLUME BARS (Institutional Inflow) -->
-                <rect x="25" y="150" width="10" height="10" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="55" y="145" width="10" height="15" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="85" y="148" width="10" height="12" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
-                <rect x="115" y="142" width="10" height="18" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="145" y="144" width="10" height="16" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="175" y="146" width="10" height="14" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
-                <rect x="205" y="138" width="10" height="22" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="235" y="132" width="10" height="28" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="265" y="140" width="10" height="20" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
-                <rect x="295" y="130" width="10" height="30" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="325" y="125" width="10" height="35" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="355" y="128" width="10" height="32" fill="rgba(239, 68, 68, 0.25)" rx="1"/>
-                <rect x="385" y="120" width="10" height="40" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="415" y="112" width="10" height="48" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="445" y="105" width="10" height="55" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="475" y="98" width="10" height="62" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="505" y="90" width="10" height="70" fill="url(#volGreenGlow)" rx="1"/>
-                <rect x="535" y="82" width="10" height="78" fill="url(#volGreenGlow)" rx="1"/>
+                <rect x="25" y="150" width="10" height="10" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="55" y="145" width="10" height="15" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="85" y="148" width="10" height="12" fill="rgba(239, 68, 68, 0.25)" rx="1" />
+                <rect x="115" y="142" width="10" height="18" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="145" y="144" width="10" height="16" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="175" y="146" width="10" height="14" fill="rgba(239, 68, 68, 0.25)" rx="1" />
+                <rect x="205" y="138" width="10" height="22" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="235" y="132" width="10" height="28" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="265" y="140" width="10" height="20" fill="rgba(239, 68, 68, 0.25)" rx="1" />
+                <rect x="295" y="130" width="10" height="30" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="325" y="125" width="10" height="35" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="355" y="128" width="10" height="32" fill="rgba(239, 68, 68, 0.25)" rx="1" />
+                <rect x="385" y="120" width="10" height="40" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="415" y="112" width="10" height="48" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="445" y="105" width="10" height="55" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="475" y="98" width="10" height="62" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="505" y="90" width="10" height="70" fill="url(#volGreenGlow)" rx="1" />
+                <rect x="535" y="82" width="10" height="78" fill="url(#volGreenGlow)" rx="1" />
 
                 <!-- CANDLESTICKS SEQUENCE (RISING EXPONENTIALLY) -->
                 <!-- Candle 1: Base -->
-                <line x1="30" y1="130" x2="30" y2="148" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="25" y="135" width="10" height="10" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="30" y1="130" x2="30" y2="148" stroke="#00f090" stroke-width="1.2" />
+                <rect x="25" y="135" width="10" height="10" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 2: Slight climb -->
-                <line x1="60" y1="126" x2="60" y2="142" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="55" y="129" width="10" height="9" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="60" y1="126" x2="60" y2="142" stroke="#00f090" stroke-width="1.2" />
+                <rect x="55" y="129" width="10" height="9" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 3: Minor dip -->
-                <line x1="90" y1="127" x2="90" y2="144" stroke="#ef4444" stroke-width="1.2"/>
-                <rect x="85" y="130" width="10" height="8" fill="#ef4444" rx="1"/>
+                <line x1="90" y1="127" x2="90" y2="144" stroke="#ef4444" stroke-width="1.2" />
+                <rect x="85" y="130" width="10" height="8" fill="#ef4444" rx="1" />
 
                 <!-- Candle 4: Rebound -->
-                <line x1="120" y1="118" x2="120" y2="136" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="115" y="121" width="10" height="11" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="120" y1="118" x2="120" y2="136" stroke="#00f090" stroke-width="1.2" />
+                <rect x="115" y="121" width="10" height="11" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 5: Push up -->
-                <line x1="150" y1="112" x2="150" y2="130" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="145" y="115" width="10" height="12" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="150" y1="112" x2="150" y2="130" stroke="#00f090" stroke-width="1.2" />
+                <rect x="145" y="115" width="10" height="12" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 6: Retest -->
-                <line x1="180" y1="114" x2="180" y2="132" stroke="#ef4444" stroke-width="1.2"/>
-                <rect x="175" y="118" width="10" height="8" fill="#ef4444" rx="1"/>
+                <line x1="180" y1="114" x2="180" y2="132" stroke="#ef4444" stroke-width="1.2" />
+                <rect x="175" y="118" width="10" height="8" fill="#ef4444" rx="1" />
 
                 <!-- Candle 7: Bullish engulfing -->
-                <line x1="210" y1="102" x2="210" y2="124" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="205" y="106" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="210" y1="102" x2="210" y2="124" stroke="#00f090" stroke-width="1.2" />
+                <rect x="205" y="106" width="10" height="14" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 8: Breakout candle -->
-                <line x1="240" y1="90" x2="240" y2="114" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="235" y="94" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="240" y1="90" x2="240" y2="114" stroke="#00f090" stroke-width="1.2" />
+                <rect x="235" y="94" width="10" height="15" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 9: Slight breather -->
-                <line x1="270" y1="92" x2="270" y2="110" stroke="#ef4444" stroke-width="1.2"/>
-                <rect x="265" y="96" width="10" height="8" fill="#ef4444" rx="1"/>
+                <line x1="270" y1="92" x2="270" y2="110" stroke="#ef4444" stroke-width="1.2" />
+                <rect x="265" y="96" width="10" height="8" fill="#ef4444" rx="1" />
 
                 <!-- Candle 10: Acceleration -->
-                <line x1="300" y1="80" x2="300" y2="102" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="295" y="84" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="300" y1="80" x2="300" y2="102" stroke="#00f090" stroke-width="1.2" />
+                <rect x="295" y="84" width="10" height="14" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 11: Higher high -->
-                <line x1="330" y1="70" x2="330" y2="92" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="325" y="74" width="10" height="14" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="330" y1="70" x2="330" y2="92" stroke="#00f090" stroke-width="1.2" />
+                <rect x="325" y="74" width="10" height="14" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 12: Mini consolidation -->
-                <line x1="360" y1="72" x2="360" y2="88" stroke="#ef4444" stroke-width="1.2"/>
-                <rect x="355" y="75" width="10" height="8" fill="#ef4444" rx="1"/>
+                <line x1="360" y1="72" x2="360" y2="88" stroke="#ef4444" stroke-width="1.2" />
+                <rect x="355" y="75" width="10" height="8" fill="#ef4444" rx="1" />
 
                 <!-- Candle 13: Momentum expansion -->
-                <line x1="390" y1="58" x2="390" y2="80" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="385" y="62" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="390" y1="58" x2="390" y2="80" stroke="#00f090" stroke-width="1.2" />
+                <rect x="385" y="62" width="10" height="15" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 14: Big green bull bar -->
-                <line x1="420" y1="46" x2="420" y2="70" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="415" y="50" width="10" height="17" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="420" y1="46" x2="420" y2="70" stroke="#00f090" stroke-width="1.2" />
+                <rect x="415" y="50" width="10" height="17" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 15: Parabolic extension -->
-                <line x1="450" y1="36" x2="450" y2="58" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="445" y="40" width="10" height="16" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="450" y1="36" x2="450" y2="58" stroke="#00f090" stroke-width="1.2" />
+                <rect x="445" y="40" width="10" height="16" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 16: Upper circuit push -->
-                <line x1="480" y1="26" x2="480" y2="48" stroke="#00f090" stroke-width="1.2"/>
-                <rect x="475" y="30" width="10" height="16" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="480" y1="26" x2="480" y2="48" stroke="#00f090" stroke-width="1.2" />
+                <rect x="475" y="30" width="10" height="16" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 17: Super candle -->
-                <line x1="510" y1="18" x2="510" y2="38" stroke="#00f090" stroke-width="1.5"/>
-                <rect x="505" y="22" width="10" height="15" fill="url(#bullGreenGlow)" rx="1"/>
+                <line x1="510" y1="18" x2="510" y2="38" stroke="#00f090" stroke-width="1.5" />
+                <rect x="505" y="22" width="10" height="15" fill="url(#bullGreenGlow)" rx="1" />
 
                 <!-- Candle 18: THE ACTIVE LIVE RISING CANDLE -->
                 <g class="live-forming-candle" id="live-candle-group">
-                  <line id="live-candle-wick" x1="540" y1="10" x2="540" y2="32" stroke="#00f090" stroke-width="2"/>
-                  <rect id="live-candle-body" x="535" y="14" width="10" height="14" fill="#00f090" rx="1"/>
+                  <line id="live-candle-wick" x1="540" y1="10" x2="540" y2="32" stroke="#00f090" stroke-width="2" />
+                  <rect id="live-candle-body" x="535" y="14" width="10" height="14" fill="#00f090" rx="1" />
                 </g>
 
                 <!-- Current Price Tracking Line Across To Axis -->
-                <line id="price-tracking-line" class="live-tracking-line" x1="10" y1="14" x2="575" y2="14" stroke="#00f090" stroke-dasharray="4 3" stroke-width="1.4"/>
-                
+                <line id="price-tracking-line" class="live-tracking-line" x1="10" y1="14" x2="575" y2="14"
+                  stroke="#00f090" stroke-dasharray="4 3" stroke-width="1.4" />
+
                 <!-- Live Price Badge on Axis -->
                 <g id="live-price-axis-badge" transform="translate(580, 7)">
-                  <rect x="0" y="0" width="58" height="15" rx="3" fill="#00f090"/>
-                  <text id="live-price-axis-text" x="29" y="11" text-anchor="middle" fill="#051a11" font-size="8.5" font-weight="bold" font-family="JetBrains Mono">₹4,892</text>
+                  <rect x="0" y="0" width="58" height="15" rx="3" fill="#00f090" />
+                  <text id="live-price-axis-text" x="29" y="11" text-anchor="middle" fill="#051a11" font-size="8.5"
+                    font-weight="bold" font-family="JetBrains Mono">₹4,892</text>
                 </g>
               </svg>
             </div>
@@ -308,7 +318,8 @@
       <div class="section-tag">EARNINGS CALL TRANSCRIPT</div>
       <h2 class="section-title">The Agreed Term Sheet 📑✨</h2>
       <p class="section-desc">
-        Due diligence successfully concluded. Both parties have officially reviewed the fundamentals and confirmed high conviction.
+        Due diligence successfully concluded. Both parties have officially reviewed the fundamentals and confirmed high
+        conviction.
       </p>
 
       <div class="transcript-card">
@@ -362,7 +373,8 @@
             <div class="trust-gate-badge">🔒 A PERSONAL NOTE &amp; TRUST CHECK</div>
             <h4 class="trust-gate-title">This is something deeply personal to me.</h4>
             <p class="trust-gate-desc">
-              I rarely share what I went through with anyone, but sharing this means I am placing genuine trust in you. Are you ready and do you have a few peaceful, free minutes to read my honest story right now?
+              I rarely share what I went through with anyone, but sharing this means I am placing genuine trust in you.
+              Are you ready and do you have a few peaceful, free minutes to read my honest story right now?
             </p>
             <div class="trust-gate-actions">
               <button type="button" class="btn btn-primary btn-sm" id="btn-unlock-story">
@@ -373,7 +385,8 @@
               </button>
             </div>
             <div class="trust-delay-msg" id="trust-delay-msg" style="display: none;">
-              <span>No problem at all! We can chat about it in person over cold coffee and whiskey. 😊 (You can unlock it above anytime if you change your mind!)</span>
+              <span>No problem at all! We can chat about it in person over cold coffee and whiskey. 😊 (You can unlock
+                it above anytime if you change your mind!)</span>
             </div>
           </div>
 
@@ -389,9 +402,15 @@
               <div class="story-chapter-card">
                 <span class="story-chapter-tag">01 // WHO I AM</span>
                 <p>
-                  I live in Goa. At first glance, I probably look like a very calm, simple boy. But once you read through this and get to know me, you'll realize: yes, I'm actually a cute, mischievous guy - total mastikhor at heart! 😜 By day, I'm a full-stack developer; outside of work, I sing, create videos, and game. I have an almost endless amount of patience (though fair warning: once it truly runs out, I can be the most <em>'chidchida'</em> person in the room! 😅). I don't cry easily in real life, but emotional movie scenes get me every single time.
+                  I live in Goa. At first glance, I probably look like a very calm, simple boy. But once you read
+                  through this and get to know me, you'll realize: yes, I'm actually a cute, mischievous guy - total
+                  mastikhor at heart! 😜 By day, I'm a full-stack developer; outside of work, I sing, create videos, and
+                  game. I have an almost endless amount of patience (though fair warning: once it truly runs out, I can
+                  be the most <em>'chidchida'</em> person in the room! 😅). I don't cry easily in real life, but
+                  emotional movie scenes get me every single time.
                 </p>
-                <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="story-insta-pill">
+                <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer"
+                  class="story-insta-pill">
                   <span>📸 Find some of my music &amp; vibes on Insta: <strong>@_.o._m</strong> ↗</span>
                 </a>
               </div>
@@ -400,24 +419,36 @@
               <div class="story-chapter-card">
                 <span class="story-chapter-tag">02 // DISCIPLINE, TRAVEL PASSION &amp; CANDIDS</span>
                 <p>
-                  My father was a teacher, so growing up was very disciplined. Because of that, I never really had many friends to roam around or travel with. But I have always had this deep passion to roam and explore places, just like how you do. Please take me along if possible - I would genuinely love to be a part of that journey with you. And since I love photography, you'll always have someone to click some amazing, effortless candids of you wherever we go! 📸
+                  My father was a teacher, so growing up was very disciplined. Because of that, I never really had many
+                  friends to roam around or travel with. But I have always had this deep passion to roam and explore
+                  places, just like how you do. Please take me along if possible - I would genuinely love to be a part
+                  of that journey with you. And since I love photography, you'll always have someone to click some
+                  amazing, effortless candids of you wherever we go! 📸
                 </p>
                 <p class="story-insta-sub">
-                  📸 Want to see some of my photography style? Connect on Insta: <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="story-inline-link"><strong>@_.o._m</strong> ↗</a>
+                  📸 Want to see some of my photography style? Connect on Insta: <a
+                    href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer"
+                    class="story-inline-link"><strong>@_.o._m</strong> ↗</a>
                 </p>
               </div>
 
               <!-- Chapter 3 -->
               <div class="story-chapter-card highlight-story">
-                <span class="story-chapter-tag text-green">03 // TRANSPARENCY: PAST MISTAKES, 4-YEAR RESET &amp; REDIRECTION</span>
+                <span class="story-chapter-tag text-green">03 // TRANSPARENCY, GROWTH &amp; LESSONS</span>
                 <p>
-                  I want to be completely transparent with you: you are not the first girl I have liked or been obsessed with. Currently, yes, I am definitely obsessed with you! But in my past, I made a lot of mistakes - had girlfriends in college, messed up in relationships, and went through total chaos.
+                  I want to be completely open with you: like anyone in their twenties, I've had past relationships and
+                  life lessons. After an old relationship ended back in 2020, I took a long pause to focus entirely on
+                  myself - stayed disciplined, worked out in the gym, and focused on my craft.
                 </p>
                 <p style="margin-top: 10px;">
-                  After an old relationship ended 6 years ago back in 2020, I literally lost all hope in love for 4 whole years. During that phase, I kept completely to myself, stayed disciplined, and worked out in the gym. But in 2024, I found a girl and approached her - which turned out to be the biggest mistake of my life. I went through heavy chaos and heartbreak, but that pain forced me to look in the mirror, take accountability, and completely redirect my life.
+                  Those years and life experiences taught me real self-respect, emotional maturity, and clarity about
+                  what truly matters in a life partner. I chose never to let past experiences make me bitter or closed
+                  off. I took the lessons to heart, found my inner peace, and that redirection is what brought me right
+                  here to Shaadi.
                 </p>
                 <p style="margin-top: 10px;">
-                  I chose never to let those mistakes make me bitter or closed off. I redirected, found my inner peace, and that redirection is what brought me right here to Shaadi, and ultimately to connecting with you. I still believe good, genuine people exist, and that true sincerity is always worth holding out for.
+                  Today, I know who I am and what I value: genuine kindness, mutual respect, effortless communication,
+                  and someone to share peaceful, fun adventures with.
                 </p>
               </div>
 
@@ -425,10 +456,17 @@
               <div class="story-chapter-card highlight-story">
                 <span class="story-chapter-tag text-cyan">04 // WHY SHAADI ON MY OWN &amp; THE GOA PERSPECTIVE</span>
                 <p>
-                  I am on Shaadi completely on my own - nobody forced me. My thought process is simple: before jumping to involve families, I first want to truly know that person myself. Understand who they are, match vibes, and build real trust. If it goes smooth like butter, that's what makes it beautiful na? If things go really well, only then does it make sense to tell our parents.
+                  I am on Shaadi completely on my own - nobody forced me. My thought process is simple: before jumping
+                  to involve families, I first want to truly know that person myself. Understand who they are, match
+                  vibes, and build real trust. If it goes smooth like butter, that's what makes it beautiful na? If
+                  things go really well, only then does it make sense to tell our parents.
                 </p>
                 <p style="margin-top: 10px;">
-                  The biggest barrier on matrimonial apps has been the Goa myth. Almost every conversation hit a wall the moment they realized I live in Goa - they'd ask <em>"How will this ever work?"</em> and fade away. But nobody ever thought: <strong>who said only the woman has to leave her world and relocate to the guy's house? Why can't it be ulta?</strong> A Goa guy can move to Mumbai too. When a connection is real, location is a logistical detail, not a deal-breaker.
+                  The biggest barrier on matrimonial apps has been the Goa myth. Almost every conversation hit a wall
+                  the moment they realized I live in Goa - they'd ask <em>"How will this ever work?"</em> and fade away.
+                  But nobody ever thought: <strong>who said only the woman has to leave her world and relocate to the
+                    guy's house? Why can't it be ulta?</strong> A Goa guy can move to Mumbai too. When a connection is
+                  real, location is a logistical detail, not a deal-breaker.
                 </p>
               </div>
 
@@ -436,7 +474,13 @@
               <div class="story-chapter-card">
                 <span class="story-chapter-tag text-purple">05 // NOTICING YOU &amp; WHY I'M HERE</span>
                 <p>
-                  I first saw you on Shaadi, Shraddha. Even though you are slightly older than me, I chose to connect without a second thought - because honestly, how could anyone pass on such a beautiful woman, right? We then connected on WhatsApp. I know you aren't really someone who likes texting or chatting a lot, yet you still make the effort to reply to me, and that means the absolute world to me. The fact that you take out your time from your busy day to talk with me is huge. And after our call felt so natural and effortless, I wanted to put in real effort to show you how much I appreciate you. That's why I built this whole prospectus for you, and that's why I'm here.
+                  I first saw you on Shaadi, Shraddha. Even though you are slightly older than me, I chose to connect
+                  without a second thought - because honestly, how could anyone pass on such a beautiful woman, right?
+                  We then connected on WhatsApp. I know you aren't really someone who likes texting or chatting a lot,
+                  yet you still make the effort to reply to me, and that means the absolute world to me. The fact that
+                  you take out your time from your busy day to talk with me is huge. And after our call felt so natural
+                  and effortless, I wanted to put in real effort to show you how much I appreciate you. That's why I
+                  built this whole prospectus for you, and that's why I'm here.
                 </p>
               </div>
             </div>
@@ -446,21 +490,17 @@
           <div class="qa-reciprocal" id="qa-reciprocal-section">
             <span class="qa-tag text-gold">OMKAR'S QUESTION FOR THE SENIOR PARTNER 💭:</span>
             <p class="qa-reciprocal-q">
-              "Since I just shared my whole unfiltered story: what brings you to Shaadi, and what kind of partner are you genuinely hoping to find? (And what made you curious to connect with this Goa guy? 😉)"
+              "Since I just shared my whole unfiltered story: what brings you to Shaadi, and what kind of partner are
+              you genuinely hoping to find? (And what made you curious to connect with this Goa guy? 😉)"
             </p>
 
             <!-- Interactive Answer Input Form -->
             <form class="qa-answer-form" id="qa-answer-form">
-              <label for="shraddha-answer-text" class="qa-input-label">Your thoughts (Take your time, no wrong answers!):</label>
-              <textarea 
-                id="shraddha-answer-text" 
-                name="shraddha_answer" 
-                rows="3" 
-                class="qa-textarea" 
-                placeholder="Share your thoughts here... ✍️" 
-                required
-              ></textarea>
-              
+              <label for="shraddha-answer-text" class="qa-input-label">Your thoughts (Take your time, no wrong
+                answers!):</label>
+              <textarea id="shraddha-answer-text" name="shraddha_answer" rows="3" class="qa-textarea"
+                placeholder="Share your thoughts here... ✍️" required></textarea>
+
               <div class="qa-form-footer">
                 <button type="submit" class="btn btn-primary btn-sm" id="btn-submit-answer">
                   <span>Send Answer to Omkar 💌</span>
@@ -486,7 +526,8 @@
       <div class="section-tag">OFFICIAL TRAVEL INSTRUMENT</div>
       <h2 class="section-title">Your Ratified Boarding Pass 🎟️✨</h2>
       <p class="section-desc">
-        Pre-cleared and stamped based on your approved terms. Next stop: The Curated Hidden Gem, Cold Coffee & Whiskey, and strictly zero mountain hiking.
+        Pre-cleared and stamped based on your approved terms. Next stop: The Curated Hidden Gem, Cold Coffee & Whiskey,
+        and strictly zero mountain hiking.
       </p>
 
       <!-- Real-time Interactive Boarding Pass Card -->
@@ -599,19 +640,29 @@
         <div class="trade-inputs">
           <label class="input-label" for="time-chips">Select Preferred Execution Window:</label>
           <div class="time-chips" id="time-chips" role="radiogroup" aria-label="Preferred Time">
-            <button type="button" class="chip active" data-time="Your next Goa weekend trip (Jeep cruise)">🏖️ Your next Goa trip (Jeep cruise)</button>
-            <button type="button" class="chip" data-time="Next time I'm in Mumbai (Coffee run)">☕ Next time I'm in Mumbai</button>
-            <button type="button" class="chip" data-time="This upcoming weekend (Let's coordinate)">🌅 This upcoming weekend</button>
-            <button type="button" class="chip" data-time="Post-Market Weekday (5 PM+)">📈 Post-Market Weekday (5 PM+)</button>
+            <button type="button" class="chip active" data-time="Your next Goa weekend trip (Jeep cruise)">🏖️ Your next
+              Goa trip (Jeep cruise)</button>
+            <button type="button" class="chip" data-time="Next time I'm in Mumbai (Coffee run)">☕ Next time I'm in
+              Mumbai</button>
+            <button type="button" class="chip" data-time="This upcoming weekend (Let's coordinate)">🌅 This upcoming
+              weekend</button>
+            <button type="button" class="chip" data-time="Post-Market Weekday (5 PM+)">📈 Post-Market Weekday (5
+              PM+)</button>
           </div>
         </div>
 
         <div class="contract-terms">
-          <div class="term-bullet">✔️ <strong>The Zero-Mountains Guarantee:</strong> Strictly 0 meters of mountain hiking. 100% open jeep cruising, sea-level breezes, and sunset horizon.</div>
-          <div class="term-bullet">✔️ <strong>Dedicated Candid Photographer:</strong> Guaranteed aesthetic candids clicked for your travels, zero awkward poses 📸</div>
-          <div class="term-bullet">✔️ <strong>Trading Mentorship Clause:</strong> You teach me how trading works and how to grow money in the markets (if you're open to taking on a student), and I'll handle all the coffee, jeep routes, and good vibes.</div>
-          <div class="term-bullet">✔️ <strong>Senior Partner Authority:</strong> You get permanent AUX cord privileges and unilateral veto power over the playlist.</div>
-          <div class="term-bullet">✔️ <strong>World Traveler Clause:</strong> Unlimited airtime to discuss any country you loved exploring or plan to visit next.</div>
+          <div class="term-bullet">✔️ <strong>The Zero-Mountains Guarantee:</strong> Strictly 0 meters of mountain
+            hiking. 100% open jeep cruising, sea-level breezes, and sunset horizon.</div>
+          <div class="term-bullet">✔️ <strong>Dedicated Candid Photographer:</strong> Guaranteed aesthetic candids
+            clicked for your travels, zero awkward poses 📸</div>
+          <div class="term-bullet">✔️ <strong>Trading Mentorship Clause:</strong> You teach me how trading works and how
+            to grow money in the markets (if you're open to taking on a student), and I'll handle all the coffee, jeep
+            routes, and good vibes.</div>
+          <div class="term-bullet">✔️ <strong>Senior Partner Authority:</strong> You get permanent AUX cord privileges
+            and unilateral veto power over the playlist.</div>
+          <div class="term-bullet">✔️ <strong>World Traveler Clause:</strong> Unlimited airtime to discuss any country
+            you loved exploring or plan to visit next.</div>
         </div>
 
         <!-- The Action Buttons -->
@@ -630,7 +681,8 @@
         </div>
 
         <div class="disclaimer-text">
-          * Past performance on Shaadi.com is no guarantee of future results, but open-jeep coastal fundamentals are exceptionally bullish.
+          * Past performance on Shaadi.com is no guarantee of future results, but open-jeep coastal fundamentals are
+          exceptionally bullish.
         </div>
       </div>
     </section>
@@ -641,7 +693,7 @@
         <div class="modal-confetti-badge">🎉 EXPEDITION CONFIRMED! 🚙🚀</div>
         <h2 id="modal-title" class="modal-heading">Trade Confirmed: Strong Buy Executed!</h2>
         <p class="modal-p">
-          Congratulations! You've just locked in the most accretive open-jeep coffee date of the year. 
+          Congratulations! You've just locked in the most accretive open-jeep coffee date of the year.
         </p>
 
         <div class="modal-receipt">
@@ -667,7 +719,8 @@
           <a href="#" class="btn btn-whatsapp" id="btn-whatsapp-send" target="_blank" rel="noopener noreferrer">
             <span>Confirm on WhatsApp 💬</span>
           </a>
-          <a href="https://www.instagram.com/p/DdeaDreNdOr/#" class="btn btn-insta" id="btn-insta-connect" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/p/DdeaDreNdOr/#" class="btn btn-insta" id="btn-insta-connect"
+            target="_blank" rel="noopener noreferrer">
             <span>Connect on Instagram 📸 (@_.o._m)</span>
           </a>
           <button class="btn btn-copy" id="btn-copy-trade">
@@ -688,7 +741,8 @@
         <div class="modal-confetti-badge warning-badge">⚠️ CIRCUIT BREAKER TRIGGERED</div>
         <h2 class="modal-heading">Order Rejected by Market Regulators!</h2>
         <p class="modal-p">
-          SEBI and the Coastal Exchange Commission have halted short-selling on open jeep drives due to overwhelming positive sentiment.
+          SEBI and the Coastal Exchange Commission have halted short-selling on open jeep drives due to overwhelming
+          positive sentiment.
         </p>
         <p class="modal-sub">
           <em>Recommendation from financial analysts: Accept the open jeep cruise with zero mountain climbing 😉</em>
@@ -715,7 +769,8 @@
     <div class="footer-content">
       <p>Crafted with high conviction, open-top 4x4 energy & coastal affection. Deployed on GitHub Pages.</p>
       <div class="footer-social-wrap">
-        <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer" class="footer-insta-pill">
+        <a href="https://www.instagram.com/p/DdeaDreNdOr/#" target="_blank" rel="noopener noreferrer"
+          class="footer-insta-pill">
           <span>📸 Connect with Omkar on Instagram: <strong>@_.o._m</strong> ↗</span>
         </a>
       </div>
@@ -727,4 +782,5 @@
   <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
